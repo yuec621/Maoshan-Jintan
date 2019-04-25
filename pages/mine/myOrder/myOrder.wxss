@@ -1,0 +1,128 @@
+.swper-tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  background-color: #fff;
+}
+
+.swiper-tab-list {
+  width: 110rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #000;
+}
+
+.on {
+  color: #00a0e8;
+  border-bottom: 1px solid #00a0e8;
+}
+
+.swiper-box {
+  overflow: hidden;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 130rpx;
+  border-bottom: 1px solid #dcdcdc;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.order-list>image {
+  width: 150rpx;
+  height: 100rpx;
+  margin-top: 15rpx;
+}
+
+.order-list-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 18rpx;
+  color: #000;
+  width: 495rpx;
+}
+
+.order-list-text-up {
+  width: 495rpx;
+  margin-top: 20rpx;
+  overflow: hidden;
+}
+
+.order-list-text-down {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+.success,
+.waiting{
+  color:#c9140b;
+}
+.complete,
+.go-evaluate{
+  color: #8d8b8b;
+}
+
+.bg{
+    background-color: #eee;
+    height: 100%;
+}
+
+.order-block{
+    background-color: #fff;
+   display: flex;
+   border-top: 0.25rem solid #eee; 
+}
+.image-view{
+    width: 30%;
+}
+.operate-view{
+    flex: 1;
+    padding-left:2rem; 
+}
+.image-view,.title-view,.operate-view{
+    float: left;
+    display: inline-table;
+    height: 4rem;
+}
+.order-image{
+    margin: 5% 5% 5% 5%;
+    width: 90%;
+    height: 90%;
+}
+
+.half{
+    font-size: 0.6rem;
+    height: 2rem;
+    line-height: 2rem;
+}
+.order-title{
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.6rem;
+    height: 4rem;
+}
+
+.order-title view{
+    width: 100%;
+    line-height: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+     white-space: nowrap;
+}
+
+.pay-btn{
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    color: #c9140b;
+    font-size: 0.6rem;
+}

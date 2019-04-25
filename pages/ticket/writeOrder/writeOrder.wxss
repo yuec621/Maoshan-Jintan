@@ -1,0 +1,211 @@
+page {
+  background-color: #bfc6cc;
+}
+
+.writeOrder-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15rpx 30rpx 40rpx 30rpx;
+}
+
+/*>图片  */
+
+.icon_left {
+  width: 8rpx;
+  height: 16rpx;
+}
+
+.ticket-infor {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 15rpx;
+}
+
+.ticket-infor>view {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+
+/*常州中华恐龙园成人票  */
+
+.ticket-infor>view:nth-child(1) {
+  height: 80rpx;
+  background-color: #eeeff1;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+}
+
+.ticket-infor>view:nth-child(1) text {
+  font-size: 20rpx;
+  color: #000101;
+}
+
+.ticket-infor>view:nth-child(1) view {
+  width: 85rpx;
+  height: 25rpx;
+  line-height: 25rpx;
+  text-align: center;
+  font-size: 14rpx;
+  color: #7e7d7d;
+  border: 1px solid #7e7d7d;
+  border-radius: 8rpx;
+}
+
+/*使用日期  */
+
+.useDate {
+  height: 48rpx;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.useDateText {
+  font-size: 18rpx;
+  color: #000101;
+}
+
+.useDateText text:nth-child(2) {
+  margin-left: 15rpx;
+}
+
+.useDateText text:nth-child(3) {
+  margin-left: 5rpx;
+}
+
+.useDateText text:nth-child(4) {
+  margin-left: 10rpx;
+  color: #ff9a14;
+}
+
+/*购买份数  */
+
+.shoppingNumber {
+  height: 80rpx;
+}
+
+.shoppingNumberText {
+  font-size: 18rpx;
+  color: #000101;
+}
+
+.shoppingNumberText text:nth-child(2) {
+  margin-left: 10rpx;
+}
+
+.shoppingNumberAdd {
+  display: flex;
+  flex-direction: row;
+}
+
+.shoppingNumberAdd view {
+  width: 44rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  border: 1px solid #00a0e8;
+  color: #00a0e8;
+}
+
+.shoppingNumberAdd view:nth-child(1) {
+  border-right: 0;
+  font-size: 20rpx;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+
+.shoppingNumberAdd view:nth-child(2) {
+  color: #000101;
+  font-size: 35rpx;
+}
+
+.shoppingNumberAdd view:nth-child(3) {
+  border-left: 0;
+  font-size: 40rpx;
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+/*出行人  */
+
+.ticket-infor>view:nth-child(4) {
+  height: 30rpx;
+  background-color: #eeeff1;
+  font-size: 18rpx;
+  align-items: flex-start;
+}
+
+/*需选择1个出行人  */
+
+.ticket-infor view:nth-child(5) {
+  height: 80rpx;
+}
+
+.ticket-infor view:nth-child(5) text {
+  font-size: 18rpx;
+  color: #bfc6cc;
+}
+
+.getTicket, .discountCoupon {
+  margin-top: 20rpx;
+}
+
+.getTicket view, .discountCoupon view {
+  height: 60rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.getTicket view:nth-child(1), .discountCoupon view:nth-child(1) {
+  background-color: #eeeff1;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+}
+
+.getTicket view text, .discountCoupon view text {
+  font-size: 20rpx;
+}
+
+.getTicket>view:nth-child(2), .discountCoupon>view:nth-child(2) {
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+
+.getTicket>view:nth-child(2) text:nth-child(2) {
+  margin-left: 10rpx;
+}
+
+/*优惠券  */
+
+.discountCoupon>view:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.discountCouponNo {
+  margin-left: 20rpx;
+}
+
+/*总额   */
+
+.total-container {
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 30rpx;
+  color: #ff9a14;
+  background-color: #fff;
+  padding-left: 30rpx;
+}
+
+.total-container text:nth-child(2) {
+  font-weight: 600;
+}

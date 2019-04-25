@@ -1,0 +1,143 @@
+<scroll-view class='container-home' scroll-y='true'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='{{circular}}' indicator-active-color="#F9BE00" >
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <!-- <navigator url="{{item.link}}"hover-class="navigator-hover"> -->
+        <image src="{{item.img}}" class="slide-image" mode='widFix' />
+        <!-- </navigator> -->
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--分割带-->
+  <view class='grey'></view>
+
+  <!--菜单-->
+  <view class='table-menu'>
+    <block>
+      <view class="tr bg-g">
+        <view class="td" wx:for="{{menuList}}" wx:if="{{index / 3 < 1}}" bindtap='menuClick' data-url='{{menuList[index].url}}'>
+          <image src="{{menuList[index].imageUrl}}" mode='widthFix' />
+          <view class='menu-title'>{{menuList[index].title}}</view>
+        </view>
+      </view>
+      <view class="tr">
+        <view class="td" wx:for="{{menuList}}" wx:if="{{index / 3 >= 1}}" bindtap='menuClick' data-url='{{menuList[index].url}}'>
+          <image src="{{menuList[index].imageUrl}}" mode='widthFix' />
+          <view class='menu-title'>{{menuList[index].title}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!--分割带-->
+   <view class='grey'></view>
+  <!--资讯推荐-->
+   <view class='label-recommend-label-line goods-line'>
+  <view>
+  <span class='label-recommend-label-block'></span>
+    <span class='label-recommend-label-title'>热门旅游资讯</span>
+    </view>
+   <view>
+        <span class="more goods-title goods-border"   bindtap='goodsMore' data-url='https://cztour.sytours.com/Mobile/Shopping/Index'>更多</span>
+       <span class="more-right">></span>     
+     </view>       
+  </view>
+   <view class='information-recommend'>
+    <view class='bg-line-blue'></view>
+        <block wx:for='{{infomationList}}' wx:if="{{index / 3 < 1}}">
+      <!-- wx:for='{{goodsList}}' -->
+      <view class='information-list' bindtap='infoClick' data-url="{{infomationList[index].url}}">
+        <image src="{{infomationList[index].imageUrl}}" />
+        <view class='information-item-title'>{{infomationList[index].title}}</view>
+      </view>
+    </block>
+  
+  </view>
+
+
+
+
+
+
+  <!--分割带-->
+   <view class='grey'></view>
+  <!--视频推荐-->
+  <view class='label-recommend-label-line'>
+  <view>
+  <span class='label-recommend-label-block'></span>
+    <span class='label-recommend-label-title'>热门旅游视频</span>
+    </view>
+   <view>
+        <span class="more"  bindtap='videoMore' data-url='https://cztour.sytours.com/mobile/smartvideo/list/1'>更多</span>
+       <span class="more-right">></span>     
+     </view>       
+  </view>
+  <view class='video-recommend'>
+    <block wx:for='{{videoList}}' wx:if="{{index / 2 < 1}}">
+      <!-- wx:for='{{videoList}}'-->
+      <view class='view-list' bindtap='videoClick' data-url="https://cztour.sytours.com/Mobile/SmartVideo/Video/{{item.Id}}">
+        <view class='viewImgContainer'>
+          <image src="http://www.cztour.com{{item.Pic}}" class='viewImg' />
+          <image src='/images/video_open.png' class='videoOpenImg'></image>
+        </view>
+        <view class='video-item-title'>{{item.Name}}</view>
+      </view>
+    </block>
+
+  </view>
+  <!--分割带-->
+   <view class='grey'></view>
+  <!--美食推荐-->
+   <view class='label-recommend-label-line goods-line'>
+  <view>
+  <span class='label-recommend-label-block'></span>
+    <span class='label-recommend-label-title'>热门旅游美食</span>
+    </view>
+   <view>
+        <span class="more goods-title goods-border"   bindtap='goodsMore' data-url='https://cztour.sytours.com/Mobile/Shopping/Index'>更多</span>
+       <span class="more-right">></span>     
+     </view>       
+  </view>
+
+  <view class='view-recommend'>
+    <view class='bg-line-blue'></view>
+    <!-- <block wx:for='{{goodsList}}'>
+      
+      <view class='recommend-list' bindtap='GoodsClick' data-url="https://cztour.sytours.com/Mobile/Shopping/Info/{{item.Id}}">
+        <image src="http://www.cztour.com{{item.Pic}}" />
+        <view class='recommend-item-title'>{{item.Name}}</view>
+      </view>
+    </block> -->
+    <block wx:for='{{cuisineList}}' >
+      <!-- wx:for='{{goodsList}}' -->
+      <view class='recommend-list' bindtap='infoClick' data-url="{{cuisineList[index].url}}">
+        <image src="{{cuisineList[index].imageUrl}}" />
+        <view class='recommend-item-title'>{{cuisineList[index].title}}</view>
+      </view>
+    </block>
+  
+  </view>
+</scroll-view>
+
+<!-- 自定义弹框开始 -->
+<view class='dialog-container' wx:if="{{showModel}}">
+  <view class='dialog-mask'></view>
+  <view class='dialog-info'>
+    <view class='dialog-title'>登录提示</view>
+    <view class='dialog-content'>微信登录需要获取您的用户信息</view>
+    <view class='dialog-footer'>
+      <button class='dialog-btn' open-type="getUserInfo" bindgetuserinfo='agreeGetUser' lang="zh_CN">确认授权</button>
+    </view>
+  </view>
+</view>
+<!-- <view class="mask" wx:if="{{showModel}}"></view>
+<view class="modalDlg" wx:if="{{showModel}}">
+    <view class="modelTitle" style='margin-top:3%'>
+      获取微信授权信息
+    </view>
+    <view style='width:580rpx;height:1px;margin:0px auto;padding:0px;background-color:#D5D5D5;overflow:hidden;margin-top:3%'></view>
+    <text class='text' style='margin-top:30px;'>微信登录需要获取您的用户信息</text>
+    <button  open-type="getUserInfo" bindgetuserinfo="agreeGetUser" lang="zh_CN" style='margin-top:50px'>确认授权</button>
+</view>
+-->

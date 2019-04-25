@@ -1,0 +1,36 @@
+<view class='selectTravellerList'>
+  <!--姓名  -->
+  <view class='name'>
+    <view class='nameList'>
+      <text>姓名</text>
+      <input type="text" placeholder='确保与证件保持一致'></input>
+    </view>
+    <view class='choseLanguage'>
+      <view>中</view>
+      <view>英</view>
+    </view>
+  </view>
+  <!--证件类型  -->
+  <view class='idType'>
+    <view class='idTypeList'>
+      <text>证件类型</text>
+      <text>身份证</text>
+    </view>
+    <image class='icon_left' src='/images/icon_left2.png'></image>
+  </view>
+  <!--证件号码  -->
+  <view class='idNumber'>
+    <text>证件号码</text>
+    <input type='number' placeholder='与证件上一致'></input>
+  </view>
+  <!--联系电话  -->
+  <view class='phone'>
+    <text>联系电话</text>
+    <input type='number' placeholder='联系电话'></input>
+  </view>
+</view>
+<!--取消完成  -->
+<view class='complete'>
+  <view>取消</view>
+  <view>完成</view>
+</view>

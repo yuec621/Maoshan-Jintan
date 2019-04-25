@@ -1,0 +1,18 @@
+<view class='phone'>
+  <text>手机号</text>
+  <input type="number" placeholder='注册或绑定手机号'></input>
+</view>
+<view class='pwd'>
+  <view class='pwd-input'>
+    <text>动态码</text>
+    <input password="true" placeholder='短信动态码'></input>
+  </view>
+  <view class='get-pwd'>获取动态码</view>
+</view>
+<!--登录  -->
+<view class='register'>登录</view>
+<!--微信登录  -->
+<view class='wx-register'>
+  <image src='/images/wx.png'></image>
+  <text>使用微信账号登录</text>
+</view>

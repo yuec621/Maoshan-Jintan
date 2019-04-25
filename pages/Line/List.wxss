@@ -1,0 +1,91 @@
+/* pages/Line/List.wxss */
+/*
+.line-item{
+  padding:0 0 0.5rem 0;
+  width: 100%;
+  border-bottom: 0.5rem solid #eee; 
+}
+.line-item-img{
+  width: 100%;
+  height: 10rem;
+}
+
+.line-item-title {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.8rem;
+}
+
+.line-title{
+  padding-left: 1rem;
+  -webkit-flex: 2;
+  flex: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line-price, .line-order{
+  padding-left: 1rem;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.line-price-text{
+  color: #FF5A5A;
+}
+
+.line-order{
+  color: #FF6901;
+}
+.loading{
+  width:100%;
+  height: 46px;
+  background-color: #eee;
+  line-height: 46px;
+  text-align: center;
+}
+*/
+/*2019.3.4 更改旅游线路布局*/
+.bg{
+    background-color: #eee;
+}
+.line-item{
+  width: 50%;
+  float: left;
+  height: 8.5rem;
+  margin: 0 0 0.2rem 0;
+}
+.line-item-img{
+  padding: 0;
+  width: 96%;
+  height: 8rem;
+  margin: 0 auto 0 auto;
+}
+
+.line-title{
+  text-align: center;
+  color: #fff;
+  opacity: 0.5;
+  position: relative;
+  top:-1.7rem;
+  display:block;
+  width: 96%;
+  font-size: 0.7rem;
+  background-color: #000;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.loading{
+  clear: both;
+  width:100%;
+  height: 46px;
+  background-color: #eee;
+  line-height: 46px;
+  text-align: center;
+}

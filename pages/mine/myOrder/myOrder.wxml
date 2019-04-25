@@ -1,0 +1,27 @@
+<scroll-view class='bg' style='min-height:{{winHeight}}px;'>
+<view class='swper-tab'>
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="switchNav">全部</view>
+  <view class="swiper-tab-list {{currentTab==7 ? 'on' : ''}}" data-current="7" bindtap="switchNav">待付款</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="switchNav">待评价</view>
+  <view class="swiper-tab-list {{currentTab==5 ? 'on' : ''}}" data-current="5" bindtap="switchNav">已成交</view>
+</view>
+<view class='orderList'>
+    <block wx:for='{{orderList}}'>
+        <view class='order-block'>
+            <view class='image-view'>
+                <image class='order-image' src='{{item.pic}}' mode='scaleToFill'></image>
+            </view>
+            <view class='order-title' style='flex:3;'>
+                <view>{{item.ordername}}</view>
+                <view>共{{item.quantity}}件商品 合计:{{item.totalprice}}元</view>
+            </view>
+            <view class='operate-view'>
+                <view class='half'>{{item.statusname}}</view>
+                <view class='half' wx:if="{{item.statusname=='待付款'}}">
+                    <view class='pay-btn' data-baseno='{{item.baseNo}}' bindtap='pay'>去支付</view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>
+</scroll-view>

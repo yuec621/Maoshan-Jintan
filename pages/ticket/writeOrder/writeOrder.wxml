@@ -1,0 +1,67 @@
+<view class='writeOrder-container'>
+<!--第一块  -->
+  <view class='ticket-infor'>
+    <!--常州中华恐龙园成人票  -->
+    <view>
+      <text>常州中华恐龙园成人票（送价值15元血袋饮料）</text>
+      <view>购买须知</view>
+    </view>
+    <!--使用日期  -->
+    <view class='useDate'>
+      <text class='useDateText'>
+        <text>使用日期</text>
+        <text>10月10日</text>
+        <text>周二</text>
+        <text>¥210</text>
+      </text>
+      <image class='icon_left' src='/images/icon_left.png'></image>
+    </view>
+    <!--购买份数  -->
+    <view class='shoppingNumber'>
+      <text class='shoppingNumberText'>
+        <text>购买份数</text>
+        <text>（最多可购5份）</text>
+      </text>
+      <view class='shoppingNumberAdd'>
+        <view>—</view>
+        <view>1</view>
+        <view>+</view>
+      </view>
+    </view>
+    <!--出行人  -->
+    <view>出行人</view>
+    <!--需选择1个出行人  -->
+    <view>
+      <text>需选择1个出行人</text>
+      <image class='icon_left' src='/images/icon_left.png'></image>
+    </view>
+  </view>
+  <!--第二块  -->
+  <view class='getTicket'>
+    <!--取票信息  -->
+    <view><text>取票信息</text></view>
+    <!--联系手机  -->
+    <view>
+      <text>联系手机</text>
+      <text>18015004191</text>
+    </view>
+  </view>
+  <!--第三块  -->
+  <view class='discountCoupon'>
+    <!--使用优惠  -->
+    <view><text>使用优惠</text></view>
+    <!--优惠券  -->
+    <view class='discountCouponInfor'>
+      <text>
+        <text>优惠券</text>
+        <text class='discountCouponNo'>暂无可用</text>
+      </text>
+      <image class='icon_left' src='/images/icon_left.png'></image>
+    </view>
+  </view>
+</view>
+<!--总额  -->
+<view class='total-container'>
+  <text>总额：</text>
+  <text>210</text>
+</view>

@@ -1,0 +1,108 @@
+<view class='ticket-container'>
+  <!--中华恐龙园  -->
+  <view class='ticker-content-container' catchtap='ticketListTap'>
+    <image class='ticket-img' src='/images/ticket_homepage.png'></image>
+    <view class='ticket-text'>
+      <text>中华恐龙园</text>
+      <view>
+        <text>常州 5A景区</text>
+        <text>
+          <text>￥</text>
+          <text>230</text>
+        </text>
+      </view>
+      <view class='ticket-text-price'>
+        <!--主题乐园  -->
+        <view>
+          <text>主题乐园</text>
+        </view>
+        <text>
+          <text>￥</text>
+          <text>210</text>
+          <text>起</text>
+        </text>
+      </view>
+    </view>
+  </view>
+<!--淹城野生动物世界  -->
+  <view class='ticker-content-container' catchtap='ticketListTap'>
+    <image class='ticket-img' src='/images/ticket_homepage.png'></image>
+    <view class='ticket-text'>
+      <text>淹城野生动物世界</text>
+      <view>
+        <text>常州</text>
+        <text>
+          <text>￥</text>
+          <text>230</text>
+        </text>
+      </view>
+      <view class='ticket-text-price'>
+        <!--动植物园  -->
+        <view>
+          <text>动植物园</text>
+        </view>
+        <text>
+          <text>￥</text>
+          <text>210</text>
+          <text>起</text>
+        </text>
+      </view>
+    </view>
+  </view>
+  <!--南山竹海  -->
+  <view class='ticker-content-container' catchtap='ticketListTap'>
+    <image class='ticket-img' src='/images/ticket_homepage.png'></image>
+    <view class='ticket-text'>
+      <text>南山竹海</text>
+      <view>
+        <text>溧阳</text>
+        <text>
+          <text>￥</text>
+          <text>230</text>
+        </text>
+      </view>
+      <view class='ticket-text-price'>
+        <!--今日可用 自然风光 -->
+        <view>
+          <text>今日可用</text>
+        </view>
+        <view>
+          <text>自然风光</text>
+        </view>
+        <text>
+          <text>￥</text>
+          <text>210</text>
+          <text>起</text>
+        </text>
+      </view>
+    </view>
+  </view>
+  <!--天目湖山水园  -->
+  <view class='ticker-content-container' catchtap='ticketListTap'>
+    <image class='ticket-img' src='/images/ticket_homepage.png'></image>
+    <view class='ticket-text'>
+      <text>天目湖山水园</text>
+      <view>
+        <text>溧阳</text>
+        <text>
+          <text>￥</text>
+          <text>230</text>
+        </text>
+      </view>
+      <view class='ticket-text-price'>
+        <!--今日可用 自然风光  -->
+        <view>
+          <text>今日可用</text>
+        </view>
+        <view>
+          <text>自然风光</text>
+        </view>
+        <text>
+          <text>￥</text>
+          <text>210</text>
+          <text>起</text>
+        </text>
+      </view>
+    </view>
+  </view>
+</view>

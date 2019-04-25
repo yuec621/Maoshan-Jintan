@@ -1,0 +1,30 @@
+<!--pages/Line/List.wxml-->
+<!--
+<scroll-view scroll-y='true'>
+<view>
+  <block wx:for='{{lineList}}'>
+    <view class='line-item'>
+      <image class='line-item-img' mode='scaleToFill' bindtap='lineDetail' data-id='{{item.Id}}' src="{{item.Pic}}" />
+      <view class='line-item-title'>
+        <label class='line-title'>{{item.Name}}</label>
+        <label class='line-price'><label class='line-price-text'>{{item.Price}}</label>元/起</label>
+        <label class='line-order' bindtap='lineOrder' data-id='{{item.Id}}'>立即预订</label>
+      </view>
+    </view>
+  </block>
+  <view class='loading'>{{loading}}</view>
+</view>
+</scroll-view>
+-->
+<!--2019.3.4 更改旅游线路布局-->
+<scroll-view scroll-y='true' class='bg' style='min-height:{{winheight}}px'>
+<view class='bg'>
+  <block wx:for='{{lineList}}'>
+    <view class='line-item'>
+      <image class='line-item-img' mode='scaleToFill' style='height: 8rem;' bindtap='lineDetail' data-id='{{item.Id}}' src="{{item.Pic}}" />
+      <label class='line-title'>{{item.Name}}</label>
+    </view>
+  </block>
+  <view class='loading'>{{loading}}</view>
+</view>
+</scroll-view>

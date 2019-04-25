@@ -1,0 +1,75 @@
+.ticker-content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30rpx 30rpx 25rpx 30rpx;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+.ticket-img {
+  width: 175rpx;
+  height: 117rpx;
+}
+
+.ticket-text {
+  width: 480rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ticket-text>text:nth-child(1) {
+  font-size: 24rpx;
+  color: #030000;
+}
+
+.ticket-text>view:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18rpx;
+  color: #8a8989;
+}
+
+.ticket-text>view:nth-child(2) text:nth-child(2) {
+  text-decoration: line-through;
+}
+
+.ticket-text-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ticket-text-price>view {
+  width: 92rpx;
+  height: 33rpx;
+  border: 1px solid #00a0e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-text-price>view:nth-child(2) {
+  margin-left: -140rpx;
+}
+
+.ticket-text-price>view text {
+  font-size: 18rpx;
+  color: #00a0e8;
+}
+
+.ticket-text-price>text {
+  font-size: 26rpx;
+  color: #f2a603;
+}
+
+.ticket-text-price>text text:nth-child(2) {
+  margin-left: 2rpx;
+}
+
+.ticket-text-price>text text:nth-child(3) {
+  font-size: 18rpx;
+  color: #030000;
+  margin-left: 6rpx;
+}

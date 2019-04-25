@@ -1,0 +1,83 @@
+.swper-tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.swiper-tab-list {
+  width: 180rpx;
+  height: 85rpx;
+  line-height: 85rpx;
+  text-align: center;
+  font-size: 25rpx;
+  color: #000;
+}
+
+.on {
+  color: #00a0e8;
+  border-bottom: 1px solid #00a0e8;
+}
+
+.swiper-box {
+  overflow: hidden;
+}
+
+.coupon-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 560rpx;
+  height: 87rpx;
+  margin: 30rpx auto 0 auto;
+  overflow: hidden;
+}
+
+.coupon-list>image {
+  width: 86rpx;
+  height: 87rpx;
+}
+
+.coupon-list-text {
+  display: flex;
+  flex-direction: column;
+  width: 430rpx;
+}
+
+.coupon-list-text-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+.coupon-list-text-up text {
+  font-size: 22rpx;
+}
+
+.coupon-list-text-up text:nth-child(1) {
+  color: #000;
+}
+
+.coupon-list-text-down {
+  display: flex;
+  flex-direction: column;
+}
+
+.coupon-list-text-down text:nth-child(1) {
+  font-size: 15rpx;
+  color: #8e9294;
+  margin-top: 8rpx;
+}
+
+.coupon-list-text-down text:nth-child(2) {
+  font-size: 12rpx;
+  color: #8e9294;
+  margin-top: 6rpx;
+}
+.use{
+  color: #ef4e50;
+}
+.used{
+  color: #7e7d7d;
+}

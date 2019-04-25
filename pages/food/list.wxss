@@ -1,0 +1,42 @@
+/* pages/Scenic/list.wxss */
+.bg{
+    background-color: #eee;
+}
+.item{
+  width: 50%;
+  float: left;
+  height: 8.5rem;
+  margin: 0 0 0.2rem 0;
+}
+.item-img{
+  padding: 0;
+  width: 96%;
+  height: 8rem;
+  margin: 0 auto 0 auto;
+}
+
+.title{
+  text-align: center;
+  color: #fff;
+  opacity: 0.5;
+  position: relative;
+  top:-1.7rem;
+  display:block;
+  width: 96%;
+  font-size: 0.7rem;
+  background-color: #000;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.loading{
+  clear: both;
+  width:100%;
+  height: 46px;
+  background-color: #eee;
+  line-height: 46px;
+  text-align: center;
+}

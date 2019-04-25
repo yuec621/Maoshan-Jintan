@@ -1,0 +1,57 @@
+<view class='mine-title-container'>
+  <image class='mine-title-img' src='{{userHeadImg}}'></image>
+  <view class='mine-title-text-container'>
+    <text>{{userName}}</text>
+    <text>
+      <text>会员积分：</text>
+      <text>{{userVouchers}}</text>
+      <text>分</text>
+    </text>
+  </view>
+</view>
+<!--我的订单  -->
+<view class='mine-option-container' catchtap='myOrderTap'>
+  <image class='mine-option-img' src='/images/mine01.png'></image>
+  <text>我的订单</text>
+</view>
+<!--我的积分  -->
+<!-- <view class='mine-option-container'>
+  <image class='mine-option-img' src='/images/mine02.png'></image>
+  <text>我的积分</text>
+</view> -->
+<!--我的优惠券  -->
+ <view class='mine-option-container' catchtap='couponTap'>
+  <image class='mine-option-img' src='/images/mine03.png'></image>
+  <text>我的优惠券</text>
+</view>
+<!--空白view  -->
+<view class='nothing'></view>
+<!--修改个人中心  -->
+<view class='mine-option-container' catchtap='mineSetTap'>
+  <image class='mine-option-img' src='/images/mine04.png'></image>
+  <text>修改个人中心</text>
+</view>
+<!--联系客服  -->
+<!-- <view class='mine-option-container'>
+  <image class='mine-option-img' src='/images/mine05.png'></image>
+  <text>联系客服</text>
+</view> -->
+<!--退出登录  -->
+<!-- <view class='mine-option-container'>
+  <image class='mine-option-img' src='/images/mine06.png'></image>
+  <text>退出登录</text>
+</view> -->
+
+
+
+ <!-- <view wx:if="{{showModel}}" class="model">
+    <view class="modelTitle">
+      获取微信授权信息
+    </view>
+    <view class="modelBody">微信登录需要获取您的用户信息，请前往设置</view>
+    <view class="btns">
+      <button open-type="getUserInfo" class="agree" bindgetuserinfo="agreeGetUser" lang="zh_CN">去设置</button>
+    </view>
+  </view>
+  <view wx:if="{{showModel}}" class="mask"></view>
+  <!-- 自定义弹框结束 -->

@@ -1,0 +1,9 @@
+<!--pages/OutLink/outlink.wxml-->
+<view class='out-container' style='height:{{winHeight}}px;'>
+<text class='tips'>请点击下方按钮复制链接在浏览器中打开</text>
+<button bindtap='copyUrl' data-url='{{url}}'>复制链接</button>
+<view class='bg'>
+<image class= src='../../images/bg.png' mode='widthFix'></image>
+</view>
+</view>
+

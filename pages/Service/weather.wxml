@@ -1,0 +1,6 @@
+<view class="container" style='{{bgstyle}}'>
+  <text class='weather-position-address'>{{weather.liveData.province}} | {{weather.city.data}}<text class='time'>{{time}}更新</text></text>
+  <text class='weather-temperature'> {{weather.temperature.data}}<text class='oc'>℃</text> <text class='weather-str'>{{weather.weather.data}}</text></text>
+  <text class='windpower'>{{weather.winddirection.data}} {{weather.windpower.data}}</text>
+  <text class='humidity'>{{weather.humidity.text}} : {{weather.humidity.data}}</text> 
+</view>

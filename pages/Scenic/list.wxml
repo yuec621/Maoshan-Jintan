@@ -1,0 +1,12 @@
+<!--pages/Scenic/list.wxml-->
+<scroll-view scroll-y='true' class='bg' style='min-height:{{winheight}}px'>
+<view class='bg'>
+  <block wx:for='{{list}}'>
+    <view class='item'>
+      <image class='item-img' mode='scaleToFill' style='height: 8rem;' bindtap='scenicClick' data-id='{{item.Id}}' src="{{item.Pic}}" />
+      <label class='title'>{{item.Name}}</label>
+    </view>
+  </block>
+  <view class='loading'>{{loading}}</view>
+</view>
+</scroll-view>

@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/HomePage/Index",
+    "pages/information/informationHomePage/informationHomePage",
+    "pages/ticket/selectTravellerList/selectTravellerList",
+    "pages/ticket/selectTraveller/selectTraveller",
+    "pages/ticket/memberLogin/memberLogin",
+    "pages/ticket/writeOrder/writeOrder",
+    "pages/ticket/ticktHomePage/ticketHomePage",
+    "pages/mine/mineHomePage/mineHomePage",
+    "pages/mine/coupon/coupon",
+    "pages/mine/myOrder/myOrder",
+    "pages/mine/mineSet/mineSet",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/web-view/webViewPage",
+    "pages/information/informationList/informationList",
+    "pages/OutLink/outlink",
+    "pages/Line/List",
+    "pages/Line/Detail",
+    "pages/Service/index",
+    "pages/Line/Order",
+    "pages/Scenic/list",
+    "pages/Scenic/detail",
+    "pages/Hotel/list",
+    "pages/Hotel/detail",
+    "pages/food/list",
+    "pages/food/detail",
+    "pages/Service/poi",
+    "pages/Service/weather",
+    "pages/inputtips/input",
+    "pages/MapPoi/MapPoiHome"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F9BE00",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "乐游金坛"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/HomePage/Index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_click.png"
+      },
+      {
+        "pagePath": "pages/MapPoi/MapPoiHome",
+        "text": "旅游地图",
+        "iconPath": "images/map.png",
+        "selectedIconPath": "images/map_click.png"
+      },
+      {
+        "pagePath": "pages/mine/mineHomePage/mineHomePage",
+        "text": "个人中心",
+        "iconPath": "images/personal.png",
+        "selectedIconPath": "images/personal_click.png"
+      }
+    ],
+    "color": "#7f7e7e",
+    "selectedColor": "#F9BE00",
+    "borderStyle": "white",
+    "backgroundColor": "#fff"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

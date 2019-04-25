@@ -1,0 +1,8 @@
+<!--pages/Scenic/detail.wxml-->
+<scroll-view scroll-y="true" style="height:{{winHeight}}px;">
+  <image class='img' src='{{img}}' style='height: 12rem;' mode='scallToFill'></image>
+  <label class='title'>{{title}}</label>
+  <view class="content">
+    <rich-text nodes="{{content}}"></rich-text>
+  </view>
+</scroll-view>

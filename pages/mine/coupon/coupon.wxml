@@ -1,0 +1,47 @@
+<scroll-view class='bg' style='min-height:{{winHeight}}px;'>
+<view class='swper-tab'>
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">失效优惠券</view>
+</view>
+      <block wx:for='{{couponlist}}'>
+      <view class='coupon-list' data-current="0">
+        <image src='{{item.pic}}'></image>
+        <view class='coupon-list-text'>
+          <view class='coupon-list-text-up'>
+            <text>{{item.name}}</text>
+            <text class='use'>￥{{item.amount}}</text>
+          </view>
+          <view class='coupon-list-text-down'>
+            <text>适用范围：{{item.array}}</text>
+            <text>{{item.effectivedate}}~{{item.expireddate}}</text>
+          </view>
+        </view>
+      </view>
+      </block>
+      <!-- <view class='coupon-list'>
+        <image src='/images/used_coupon.png'></image>
+        <view class='coupon-list-text'>
+          <view class='coupon-list-text-up'>
+            <text>淘红包</text>
+            <text class='used'>￥100</text>
+          </view>
+          <view class='coupon-list-text-down'>
+            <text>仅限在展现中的部分商品使用</text>
+            <text>2017-09-08 19:40:15~2017-10-10 9:40:15</text>
+          </view>
+        </view>
+      </view>  
+      <view class='coupon-list'>
+        <image src='/images/used_coupon.png'></image>
+        <view class='coupon-list-text'>
+          <view class='coupon-list-text-up'>
+            <text>淘红包</text>
+            <text class='used'>￥100</text>
+          </view>
+          <view class='coupon-list-text-down'>
+            <text>仅限在展现中的部分商品使用</text>
+            <text>2017-09-08 19:40:15~2017-10-10 9:40:15</text>
+          </view>
+        </view>
+      </view> -->
+</scroll-view>

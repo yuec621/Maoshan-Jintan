@@ -1,0 +1,192 @@
+<view class="content">
+            <view class="body_c">
+                
+    <form bindsubmit="formSubmit" method="post" id="orderFome" name="orderFome">
+     <!--   <input type="hidden" name="LinesName" id="LinesName" value="赏玫瑰风情园、品长荡湖鲜、览愚池公园一日游"></input>
+        <input type="hidden" name="Lid" id="Lid" value="185"></input>
+        <input type="hidden" name="Total" id="Total" value="0"></input>
+        <input type="hidden" name="OutTime" id="OutTime" value="0"></input>
+        <input type="hidden" name="Insurance" id="Insurance" value="0"></input>
+        <input type="hidden" name="GoOuttime" id="GoOuttime" value="2018-06-06"></input>-->
+        
+        <view class="content">
+            <view class="tit">
+                <view class="top">
+                    <view class="title">
+                        {{linesname}}
+                    </view>
+                </view>
+            </view>
+            <view style="width:100%;height:10px;background-color:#f1f1f1"></view>
+
+            <view class="orderinfo">
+                <view class="o1"><label class='la'>预订信息</label> <label>单价</label><label>小计</label><label>数量</label></view>
+                <view class="o2">
+                    <label class='ti'>成人人数</label>
+                    
+                    <label>￥<i id="SellPrice">{{SellPrice}}</i></label>
+                    <label class='price' id="pri">￥{{pri}}</label>
+                    <picker mode="selector" range="{{array}}" value="{{aindex}}" bindchange="listenerAdultPicker"name='Amount'>
+                    <label class="num" name="anum" id="num">{{aindex}}</label>
+                    </picker>
+                </view>
+                <view class="o2">
+                    <label class='ti'>儿童人数</label>
+                    
+                    <label>￥<i id="ChildSellPrice">{{ChildSellPrice}}</i></label>
+                    <label class='price' id="chi_pri">￥{{chi_pri}}</label>
+                    <picker mode="selector" range="{{array}}" value="{{cindex}}" bindchange="listenerChildPicker"name='ChildAmount'>
+                    <label class="num" name="cnum" id="num">{{cindex}}</label>
+                    </picker>
+                </view>
+                <view class="o2">
+                    <label class='ti'>老人人数</label>
+                    
+                    <label>￥<i id="OldSellPrice">{{OldSellPrice}}</i></label>
+                    <label class='price' id="old_pri">￥{{old_pri}}</label>
+                    <picker mode="selector" range="{{array}}" value="{{oindex}}" bindchange="listenerOldPicker"name='OldAmount'>
+                    <label class="num" name="onum" id="num">{{oindex}}</label>
+                    </picker>
+                </view>
+                <view class="o3" style="border-bottom:0">
+                    <label style='margin-left:5%'>出游日期</label>
+                    <picker mode="date" value="{{date}}" start="{{startdate}}" end="{{enddate}}" bindchange="bindDateChange"name='GoOuttime'>
+                      <button class="picker">
+                        {{date}}
+                      </button>
+                    </picker>
+                    
+                </view>
+            </view>
+
+            <view style="width:100%;height:10px;background-color:#f1f1f1"></view>
+            <view class="orderinfo">
+                <view class="o1"><label class='la'>优惠信息</label></view>
+                <view class="o2">
+                <picker mode="selector" range="{{couponarray}}" value="{{ciid}}" bindchange="listenerAdultPicker"name='couponitemid'>
+                  <label style='margin-left:32%' bindtap='couponclick'>选择优惠券{{couponarray[ciid]}}</label>
+                </picker>
+                </view>
+
+            </view>
+
+            <view style="width:100%;height:10px;background-color:#f1f1f1"></view>
+            <view class="orderinfo">
+                <view class="o1"><label class='la'>保险费用</label> <label>单价</label><label>小计</label><label>数量</label></view>
+                <view class="o2" style="border-bottom:0;">
+                    <label class='ti'>旅游保险</label>
+                    
+                    <label>￥{{Insurance}}</label>
+                    <label class='price' id="ins_pri">￥{{ins_pri}}</label>
+                    <picker mode="selector" range="{{array}}" value="{{iindex}}" bindchange="listenerInsPicker"name='InsCount'>
+                    <label class="num" name="inum" id="num">{{iindex}}</label>
+                    </picker>
+                </view>
+                <view class="all">费用总计：<label>￥<i id="Total_pri" name="Total_pri">{{Total_pri}}</i></label></view>
+            </view>
+            
+            <view style="width:100%;height:10px;background-color:#f1f1f1"></view>
+
+            <view class="peopleinfo">
+                <view class="p1">游客信息</view>
+                <view class="box" id="pasAdult">
+                  <block wx:for='{{pasAdult}}'>
+                    <view id='pasAdult_{{item.count}}'>
+                        <view class='l' style='display:flex'>
+                            成人{{item.count}}
+                        </view>
+                        <view class='r'>
+                            <view class='p2 tourname' style='border-bottom:1px solid #d7d5d5;'>
+                                <view class='left '>游客姓名</view>
+                                <input type='text' placeholder='必填' name='pasAdult_name_{{item.count}}' id='pasAdult_name_1'></input>
+                            </view>
+                            <view class='p3'>
+                                <view class='left'>
+                                    <label>身份证</label>
+                                </view>
+                                <input type='text' placeholder='请输入出行证件上的证件号码' name='pasAdult_Identity_{{item.count}}'></input>
+                            </view>
+                        </view>
+                    </view>
+                    <view style='border-bottom:1px solid #d7d5d5;'></view>
+                  </block>
+                </view>
+                <view class="box" id="chipasAdult">
+                  <block wx:for='{{chipasAdult}}'>
+                    <view id='chipasAdult_{{item.count}}'>
+                        <view class='l' style='display:flex'>
+                            儿童{{item.count}}
+                        </view>
+                        <view class='r'>
+                            <view class='p2 tourname' style='border-bottom:1px solid #d7d5d5;'>
+                                <view class='left '>游客姓名</view>
+                                <input type='text' placeholder='必填' name='chipasAdult_name_{{item.count}}' id='chipasAdult_name_1'></input>
+                            </view>
+                            <view class='p3'>
+                                <view class='left'>
+                                    <label>身份证</label>
+                                </view>
+                                <input type='text' placeholder='请输入出行证件上的证件号码' name='chipasAdult_Identity_{{item.count}}'></input>
+                            </view>
+                        </view>
+                    </view>
+                    <view style='border-bottom:1px solid #d7d5d5;'></view>
+                  </block>
+                </view>
+                <view class="box" id="oldpasAdult">
+                  <block wx:for='{{oldpasAdult}}'>
+                    <view id='oldpasAdult_{{item.count}}'>
+                        <view class='l' style='display:flex'>
+                            老人{{item.count}}
+                        </view>
+                        <view class='r'>
+                            <view class='p2 tourname' style='border-bottom:1px solid #d7d5d5;'>
+                                <view class='left '>游客姓名</view>
+                                <input type='text' placeholder='必填' name='oldpasAdult_name_{{item.count}}' id='oldpasAdult_name_1'></input>
+                            </view>
+                            <view class='p3'>
+                                <view class='left'>
+                                    <label>身份证</label>
+                                </view>
+                                <input type='text' placeholder='请输入出行证件上的证件号码' name='oldpasAdult_Identity_{{item.count}}'></input>
+                            </view>
+                        </view>
+                    </view>
+                    <view style='border-bottom:1px solid #d7d5d5;'></view>
+                  </block>
+                </view>
+            </view>
+            <view style="width:100%;height:10px;background-color:#f1f1f1"></view>
+            <view class="peopleinfo">
+                <view class="p1">取票人信息</view>
+                <view class="p2">
+                    <view class="left">预订人姓名</view>
+                    <input type="text" placeholder="必填" id="contractName" name="ContractName"></input>
+                </view>
+                <view class="p2">
+                    <view class="left">手机号码</view>
+                    <input type="text" placeholder="接收取票短信凭证" name="Mobile" id="mobile"></input>
+                </view>
+                <view class="p3">
+                    <view class="left">
+                        <label>身份证</label>
+                    </view>
+                    <input type="text" placeholder="请输入出行证件上的证件号码" id="CardNum" name="CardNum"></input>
+                </view>
+            </view>
+            <view style="width:100%;height:10px;background-color:#f1f1f1;padding-bottom:50px;"></view>
+            <view class="buynow clear">
+                <view class="left">
+                    <view class="money">￥<label id="Money">{{Total_pri}}</label></view>
+                    <view class="icon">
+                        <label>在线预订</label>
+                    </view>
+                </view>
+               <!--  <view class="right" id="submit_btn">立即预定</view>-->
+               <button class="right"  formType="submit">立即预定</button>
+            </view>
+        </view>
+    </form>
+
+            </view>
+        </view>

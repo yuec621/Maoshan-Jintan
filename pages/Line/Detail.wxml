@@ -1,0 +1,22 @@
+<!--pages/Line/Detail.wxml-->
+<view class='box' style="height:{{winHeight}}px;">
+<scroll-view scroll-y="true" style="height:{{winHeight-46}}px;">
+  <image class='line-img' src='{{img}}' mode='scaleToFill'></image>
+  <view class='line-title'>{{title}}</view>
+  <!-- <view class='line-date'>出发日期：{{date}}</view> -->
+<view class="content">
+  <!-- <view class='line-swiper-tab'>
+    <view class="line-swiper-tab-title {{tabId==0 ? 'on' : ''}}" data-current="0" bindtap="switchTab">参考行程</view>  
+    <view class="line-swiper-tab-title {{tabId==1 ? 'on' : ''}}" data-current="1" bindtap="switchTab">路线特色</view>
+    <view class="line-swiper-tab-title {{tabId==2 ? 'on' : ''}}" data-current="2" bindtap="switchTab">费用说明</view>    
+  </view> -->
+  <view class="line-content">
+  <rich-text nodes="{{html}}"></rich-text>
+  </view>
+</view>
+</scroll-view>
+<!-- <view class='operate'>
+<label class='price'>{{price}}元/起</label>
+<button class='buy'bindtap='lineOrder'>立即购买</button>
+</view> -->
+</view>

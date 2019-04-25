@@ -1,0 +1,133 @@
+page {
+  background-color: #efefef;
+}
+
+.selectTravellerList>view {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 80rpx;
+  margin-top: 20rpx;
+}
+
+.nameList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nameList>text {
+  font-size: 25rpx;
+  color: #000101;
+  width: 96rpx;
+}
+
+.nameList>input {
+  font-size: 25rpx;
+  margin-left: 70rpx;
+}
+
+.choseLanguage {
+  display: flex;
+  flex-direction: row;
+  font-size: 25rpx;
+}
+
+.choseLanguage view {
+  width: 55rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  text-align: center;
+  border: 1px solid #00a0e8;
+}
+
+.choseLanguage view:nth-child(1) {
+  background-color: #00a0e8;
+  color: #fff;
+}
+
+.choseLanguage view:nth-child(2) {
+  color: #9a9c9c;
+}
+
+.icon_left {
+  width: 8rpx;
+  height: 16rpx;
+}
+
+.idType {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 75rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.idTypeList {
+  font-size: 25rpx;
+  color: #000101;
+}
+
+.idTypeList text:nth-child(2) {
+  margin-left: 70rpx;
+}
+
+.idNumber, .phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  height: 80rpx;
+  font-size: 25rpx;
+}
+
+.idNumber input, .phone input {
+  margin-left: 70rpx;
+}
+
+.phone {
+  margin-top: 20rpx;
+}
+
+.complete {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 145rpx;
+  border-top: 1px solid #dcdcdc;
+  font-size: 30rpx;
+  position: fixed;
+  bottom: 0;
+}
+
+.complete view {
+  width: 220rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+}
+
+.complete view:nth-child(1) {
+  background-color: #fff;
+  color: #00a0e8;
+  border: 1px solid #dcdcdc;
+  border-radius: 20rpx;
+}
+
+.complete view:nth-child(2) {
+  background-color: #ff9a14;
+  color: #fff;
+  border-radius: 20rpx;
+}

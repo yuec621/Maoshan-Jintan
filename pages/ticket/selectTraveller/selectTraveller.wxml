@@ -1,0 +1,13 @@
+<view class='add-news'>
+  <image class='addImg' src='/images/add.png'></image>
+  <text>新增旅客</text>
+</view>
+<view class='completeInfor'>
+  <image class='writeImg' src='/images/write.png'></image>
+  <view class='travellerInfor'>
+    <text>琚虹虹</text>
+    <text>320402**********29</text>
+  </view>
+  <image class='selectedImg' src='/images/selected.png'></image>
+</view>
+<view class='complete'>完成（1）</view>

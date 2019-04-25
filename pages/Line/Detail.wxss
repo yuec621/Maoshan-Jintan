@@ -1,0 +1,84 @@
+/* pages/Line/Detail.wxss */
+.box{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.line-img{
+  width: 100%;
+  height: 30%;
+}
+.line-title,.line-date{
+  height:2rem;
+  line-height: 2rem;
+  font-size: 0.8rem; 
+  padding: 0 1rem 0 1rem;
+  border-bottom: 0.125rem solid #eee;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.content{
+  height: 60%;
+  width: 100%;
+}
+
+.line-swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #777777;  
+    text-align: center;  
+    line-height: 80rpx;
+}  
+.line-swiper-tab-title{  
+    font-size: 30rpx;  
+    display: inline-block;  
+    width: 33.333%;  
+    color: #777777;  
+}  
+.on{ 
+  color: #da7c0c;  
+  border-bottom: 5rpx solid #da7c0c;
+}  
+  
+.line-swiper-box{ 
+  display: block;
+  min-height: 11rem;
+  width: 100%; 
+  height: 100%;
+  padding: 10rpx;
+  z-index:19; 
+}  
+.line-content{  
+    height: 100%;
+    padding:0.2rem 0.5rem 2rem 0.5rem;
+}  
+
+.line-content{  
+    height: 100%;
+    padding:0.2rem 0.5rem 2rem 0.5rem;
+}  
+
+.operate{
+  border-top: 1px solid #eee;
+  height: 46px;
+  bottom: 0;
+  left: 0;  
+}
+.price{
+  display:inline-table;
+  width: 50%;
+  height: 100%;
+  color: #da7c0c; 
+  text-align: center;
+  line-height: 46px;
+}
+.buy{
+  text-align: center;
+  display: inline-table;
+  width: 50%;
+  height: 100%;
+  background-color: #da7c0c;
+  color: #fff;
+  border-radius: 0;
+}

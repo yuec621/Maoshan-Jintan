@@ -1,0 +1,30 @@
+/* pages/Scenic/detail.wxss */
+.img{
+  width:100%;
+}
+
+.title{
+  text-align: center;
+  color: #fff;
+  opacity: 0.5;
+  position: relative;
+  top:-1.7rem;
+  display:block;
+  width: 100%;
+  font-size: 0.7rem;
+  background-color: #000;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content{
+  width:98%;
+  margin: auto;
+}
+.content image{
+  width: 100%;
+  height: auto;
+}

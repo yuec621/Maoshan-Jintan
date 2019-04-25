@@ -1,0 +1,55 @@
+<view class='infor-container'>
+  <view class='infor-row-container' catchtap='informationListTop'>
+    <!--文字  -->
+    <view class='infor-row-text-container'>
+      <text>外媒：美军舰再靠近南海岛附近航行未经12海里</text>
+      <text>环球网 2017-10-11</text>
+    </view>
+    <!--图片  -->
+    <view class='infor-row-img-container'>
+      <image class='infor-row-img' src='/images/infor.png'></image>
+    </view>
+  </view>
+  <view class='infor-row-container' catchtap='informationListTop'>
+    <!--文字  -->
+    <view class='infor-row-text-container'>
+      <text>外媒：美军舰再靠近南海岛附近航行未经12海里</text>
+      <text>环球网 2017-10-11</text>
+    </view>
+    <!--图片  -->
+    <view class='infor-row-img-container'>
+      <image class='infor-row-img' src='/images/infor.png'></image>
+    </view>
+  </view>
+  <view class='infor-row-container' catchtap='informationListTop'>
+    <!--文字  -->
+    <view class='infor-row-text-container'>
+      <text>外媒：美军舰再靠近南海岛附近航行未经12海里</text>
+      <text>环球网 2017-10-11</text>
+    </view>
+    <!--图片  -->
+    <view class='infor-row-img-container'>
+      <image class='infor-row-img' src='/images/infor.png'></image>
+    </view>
+  </view>
+  <view class='infor-row-container' catchtap='informationListTop'>
+    <!--文字  -->
+    <view class='infor-row-text-container'>
+      <text>外媒：美军舰再靠近南海岛附近航行未经12海里</text>
+      <text>环球网 2017-10-11</text>
+    </view>
+    <!--图片  -->
+    <view class='infor-row-img-container'>
+      <image class='infor-row-img' src='/images/infor.png'></image>
+    </view>
+  </view>
+  <view class='infor-col-container' catchtap='informationListTop'>
+    <view class='infor-col-text-container'>
+      <text>外媒：美军舰再靠近南海岛附近航行未经12海里</text>
+      <text>环球网 2017-10-11</text>
+    </view>
+    <view> 
+      <image class='infor-col-img' src='/images/infor.png'></image>
+    </view>
+  </view>
+</view>
