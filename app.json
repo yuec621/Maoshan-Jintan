@@ -29,9 +29,8 @@
     "pages/Service/poi",
     "pages/Service/weather",
     "pages/inputtips/input",
-    "pages/MapPoi/MapPoiHome",
-    "pages/scenicSpot",
-    "pages/scenicSpot/index"
+    "pages/MapPoi/MapPoiHome"
+  
   ],
   "window": {
     "backgroundTextStyle": "light",
