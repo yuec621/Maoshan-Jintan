@@ -59,77 +59,30 @@ Page({
          
       }
   ],
-  //美食
-  cuisineList: [
-    {
-        id: 1,
-        title: "道家三丹",
-        url: "https://cztour.sytours.com/Mobile/Service/Index",
-        imageUrl: "../../images/cuisine/6.jpg",
-       
-    },
-   
-    {
-      id: 2,
-      title: "秘制滆湖鸭",
-      url: "https://cztour.sytours.com/Mobile/Service/Index",
-      imageUrl: "../../images/cuisine/5.jpg",
-       
-    },
-    {
-      id: 3,
-      title: "养生大鱼头",
-      url: "https://cztour.sytours.com/Mobile/Service/Index",
-      imageUrl: "../../images/cuisine/4.jpg",
-       
-    },
-    {
-      id: 4,
-      title: "宏景豆腐",
-      url: "https://cztour.sytours.com/Mobile/Service/Index",
-      imageUrl: "../../images/cuisine/3.jpg",
-     
-  },
- 
-  {
-    id: 5,
-    title: "逍遥饼",
-    url: "https://cztour.sytours.com/Mobile/Service/Index",
-    imageUrl: "../../images/cuisine/2.jpg",
-     
-  },
-  {
-    id: 6,
-    title: "嗜香扣肉",
-    url: "https://cztour.sytours.com/Mobile/Service/Index",
-    imageUrl: "../../images/cuisine/1.jpg",
-     
-  }
-],
 
-
-
-
-
-    
     //菜单
     menuList: [
       {
-        id: 1, title: "景点景区", url: "https://cztour.sytours.com/Mobile/Service/Index", imageUrl: "../../images/menu/scenicSpot.png"
+        id: 1, title: "景点景区", url: "https://cztour.sytours.com/Mobile/ScenicTicket/Classify", imageUrl: "../../images/menu/scenicSpot.png"
       },
       {
-        id: 2, title: "美食茅山", url: "https://cztour.sytours.com/Mobile/New/Index", imageUrl: "../../images/menu/maoshanCuisine.png"
+        id: 2, title: "美食茅山", url: "https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi", imageUrl: "../../images/menu/maoshanCuisine.png"
       }, {
-        id: 3, title: "旅游攻略", url: "https://cztour.sytours.com/Mobile/ScenicTicket/Classify", imageUrl: "../../images/menu/tourismStrategy.png"
+        id: 3, title: "旅游攻略", url: "https://cztour.sytours.com//Mobile/TravelNotes/Index", imageUrl: "../../images/menu/tourismStrategy.png"
       },
       {
-        id: 4, title: "度假酒店", url: "https://cztour.sytours.com/Mobile/Tour/Index", imageUrl: "../../images/menu/resortHotel.png"
+        id: 4, title: "度假酒店",
+        url: "https://m.ctrip.com/webapp/hotel/?from=http%3A%2F%2Fm.ctrip.com%2Fhtml5%2F",
+         imageUrl: "../../images/menu/resortHotel.png"
       },
       {
-        id: 5, title: "乡村旅游", url: "https://m.ctrip.com/webapp/hotel/?from=http%3A%2F%2Fm.ctrip.com%2Fhtml5%2F", imageUrl: "../../images/menu/ruralTourism.png"
+        id: 5, title: "乡村旅游", 
+        
+        url: "https://cztour.sytours.com/Mobile/Country/Classify",
+   imageUrl: "../../images/menu/ruralTourism.png"
       },
       {
-        id: 6, title: "旅游资讯", url: "https://cztour.sytours.com/Mobile/Country/Classify", imageUrl: "../../images/menu/travelInformation.png"
+        id: 6, title: "旅游资讯", url: "https://cztour.sytours.com/Mobile/New/Index", imageUrl: "../../images/menu/travelInformation.png"
       }
     
     ]
@@ -221,8 +174,25 @@ Page({
         console.log("res",res.data);
       }
     }),
+    //热门资讯
+    wx.request({
+      url: 'https://cztour.sytours.com/actionapi/HomeRecommend/GetVideoList', //接口地址
+        data: {
+        },
+        header: {
+          "Content-Type": "application/json"
+        },
+        success: function (res) {
+          //将获取到的json数据，存在名字叫goodsList的这个数组中
+          that.setData({
+            infomationList: res.data
+
+          })
+        }
+      }),
+      //热门美食
       wx.request({
-      url: 'https://cztour.sytours.com/actionapi/HomeRecommend/GetGoodsList', //接口地址
+      url: 'https://cztour.sytours.com/actionapi/HomeRecommend/GetSportfulList?p=1&ps=10', //接口地址
         data: {
         },
         header: {
@@ -361,39 +331,28 @@ Page({
         });
         return;
       }
-      else if (dataset.url == this.data.menuList[3].url)
-      {
-        wx.navigateTo({
-          url: '../Line/List',
-        });
-        return;
-      }
       else if (dataset.url == this.data.menuList[0].url)
       {
         wx.navigateTo({
-          url: '../Service/index',
+          url: '../Scenic/list',
         });
         return;
       }
-      else if( dataset.url == this.data.menuList[2].url)
+      else if (dataset.url == this.data.menuList[1].url)
       {
-          wx.navigateTo({
-              url: '../Scenic/list',
-          });
-          return;
-      }
-      else if (dataset.url == this.data.menuList[4].url) {
-        wx.navigateTo({
-          url: '../Hotel/list',
-        });
-        return;
-      }
-      else if (dataset.url == this.data.menuList[6].url) {
         wx.navigateTo({
           url: '../food/list',
         });
         return;
       }
+      
+      else if (dataset.url == this.data.menuList[3].url) {
+        wx.navigateTo({
+          url: '../Hotel/list',
+        });
+        return;
+      }
+      
 
       wx.navigateTo({
         url: '../web-view/webViewPage?url=' + dataset.url,
@@ -433,6 +392,7 @@ Page({
       });
     }
   },
+ 
   videoClick: function (e) {
     //首页文章视图点击事件
     var dataset = e.currentTarget.dataset;
@@ -464,5 +424,12 @@ Page({
         }
       });
     }
+  },
+
+  foodClick:function(options){
+    var id = options.target.dataset.id;
+    wx.navigateTo({
+      url: '../food/detail?id=' + id,
+    })
   }
 })

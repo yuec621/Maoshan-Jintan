@@ -39,25 +39,21 @@
     <span class='label-recommend-label-title'>热门旅游资讯</span>
     </view>
    <view>
-        <span class="more goods-title goods-border"   bindtap='goodsMore' data-url='https://cztour.sytours.com/Mobile/Shopping/Index'>更多</span>
+        <span class="more goods-title goods-border"   bindtap='goodsMore' data-url='https://cztour.sytours.com/Mobile/New/Index'>更多</span>
        <span class="more-right">></span>     
      </view>       
   </view>
    <view class='information-recommend'>
     <view class='bg-line-blue'></view>
-        <block wx:for='{{infomationList}}' wx:if="{{index / 3 < 1}}">
-      <!-- wx:for='{{goodsList}}' -->
-      <view class='information-list' bindtap='infoClick' data-url="{{infomationList[index].url}}">
-        <image src="{{infomationList[index].imageUrl}}" />
-        <view class='information-item-title'>{{infomationList[index].title}}</view>
+        <block wx:for='{{infomationList}}' wx:if="{{index / 3 < 1}}"> 
+     
+      <view class='information-list' bindtap='infoClick' data-id='{{item.Id}}' mode='scaleToFill'>
+        <image src="http://www.cztour.com{{item.Pic}}" />
+        <view class='information-item-title'>{{item.Name}}</view>
       </view>
-    </block>
+    </block> 
   
   </view>
-
-
-
-
 
 
   <!--分割带-->
@@ -95,25 +91,18 @@
     <span class='label-recommend-label-title'>热门旅游美食</span>
     </view>
    <view>
-        <span class="more goods-title goods-border"   bindtap='goodsMore' data-url='https://cztour.sytours.com/Mobile/Shopping/Index'>更多</span>
+        <span class="more goods-title goods-border"   bindtap='goodsMore' data-url='https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi'>更多</span>
        <span class="more-right">></span>     
      </view>       
   </view>
 
   <view class='view-recommend'>
     <view class='bg-line-blue'></view>
-    <!-- <block wx:for='{{goodsList}}'>
-      
-      <view class='recommend-list' bindtap='GoodsClick' data-url="https://cztour.sytours.com/Mobile/Shopping/Info/{{item.Id}}">
-        <image src="http://www.cztour.com{{item.Pic}}" />
+   
+    <block wx:for='{{goodsList}}' wx:if="{{index/6<1}}" >
+        <view class='recommend-list' >
+        <image src="{{item.Pic}}"  bindtap='foodClick' data-id='{{item.Id}}' mode='scaleToFill' />
         <view class='recommend-item-title'>{{item.Name}}</view>
-      </view>
-    </block> -->
-    <block wx:for='{{cuisineList}}' >
-      <!-- wx:for='{{goodsList}}' -->
-      <view class='recommend-list' bindtap='infoClick' data-url="{{cuisineList[index].url}}">
-        <image src="{{cuisineList[index].imageUrl}}" />
-        <view class='recommend-item-title'>{{cuisineList[index].title}}</view>
       </view>
     </block>
   
