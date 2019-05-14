@@ -1,12 +1,62 @@
 <!--pages/Scenic/list.wxml-->
 <scroll-view scroll-y='true' class='bg' style='min-height:{{winheight}}px'>
 <view class='bg'>
-  <block wx:for='{{list}}'>
+  <view class="first-bg">
+  <view class="title-big">东方盐湖城<p>特色美食系列</p></view>
+  <block wx:for='{{list}}' wx:if="{{index/12<1}}">
     <view class='item'>
-      <image class='item-img' mode='scaleToFill' style='height: 8rem;' bindtap='foodClick' data-id='{{item.Id}}' src="{{item.Pic}}" />
-      <label class='title'>{{item.Name}}</label>
+      <image class='item-img' mode='scaleToFill'  bindtap='foodClick' data-id='{{item.Id}}' src="{{item.Pic}}" />
+     <view class="image-title">{{item.Name}}</view>
     </view>
   </block>
+</view>
+
+<view class="first-bg">
+  <view class="title-big">一号农场名都<p>经典菜肴系列</p></view>
+  <block wx:for='{{list}}' wx:if="{{index/5<1}}">
+    <view class='item'>
+      <image class='item-img' mode='scaleToFill'  bindtap='foodClick' data-id='{{item.Id}}' src="{{item.Pic}}" />
+     <view class="image-title">{{item.Name}}</view>
+    </view>
+  </block>
+</view>
+
+<view class="first-bg">
+  <view class="title-big">华夏宝盛园宝名膳居<p>系列</p></view>
+  <block wx:for='{{list}}' wx:if="{{index/5<1}}">
+    <view class='item'>
+      <image class='item-img' mode='scaleToFill'  bindtap='foodClick' data-id='{{item.Id}}' src="{{item.Pic}}" />
+     <view class="image-title">{{item.Name}}</view>
+    </view>
+  </block>
+</view>
+
+<view class="first-bg">
+  <view class="title-big">保朴园五味斋<p>系列</p></view>
+  <block wx:for='{{list}}' wx:if="{{index/5<1}}">
+    <view class='item'>
+      <image class='item-img' mode='scaleToFill'  bindtap='foodClick' data-id='{{item.Id}}' src="{{item.Pic}}" />
+     <view class="image-title">{{item.Name}}</view>
+    </view>
+  </block>
+</view>
+
+<view class="first-bg">
+  <view class="title-big">茅山南湖香草谷度假庄园<p>系列</p></view>
+  <block wx:for='{{list}}' wx:if="{{index/5<1}}">
+    <view class='item'>
+      <image class='item-img' mode='scaleToFill'  bindtap='foodClick' data-id='{{item.Id}}' src="{{item.Pic}}" />
+     <view class="image-title">{{item.Name}}</view>
+    </view>
+  </block>
+</view>
+
+
+
+
+
+
+
   <view class='loading'>{{loading}}</view>
 </view>
 </scroll-view>

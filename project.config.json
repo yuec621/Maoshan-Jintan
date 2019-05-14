@@ -44,7 +44,8 @@
 				{
 					"id": -1,
 					"name": "景点景区",
-					"pathName": "pages/Service/index",
+					"pathName": "pages/TravelInfo/list",
+					"query": "",
 					"scene": null
 				}
 			]

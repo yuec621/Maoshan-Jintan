@@ -1,0 +1,25 @@
+<!--pages/TravelInfo/list.wxml-->
+<scroll-view class='container-home' scroll-y='true'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='{{circular}}' indicator-active-color="#F9BE00" >
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+      <image src="{{item.img}}" class="slide-image" mode='widFix' />
+      <view class="des-title">{{item.Name}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+<view class='navContainer'>
+    <view class='tablist'>
+  <view wx:for="{{tabList}}" class='item {{current==index?"select":""}}' data-pos='{{index}}' bindtap='tabItemClick'>
+    <text>{{item}}</text>
+  </view>
+</view>
+  <view class='grey'></view>
+<view class='content'><text>{{tabList[current]}}</text></view>
+  
+</view>
+
+  <!--分割带-->
+
+  </scroll-view>

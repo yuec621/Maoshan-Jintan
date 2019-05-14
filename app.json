@@ -18,7 +18,7 @@
     "pages/OutLink/outlink",
     "pages/Line/List",
     "pages/Line/Detail",
-    "pages/Service/index",
+    "pages/Service1/index",
     "pages/Line/Order",
     "pages/Scenic/list",
     "pages/Scenic/detail",
@@ -26,11 +26,14 @@
     "pages/Hotel/detail",
     "pages/food/list",
     "pages/food/detail",
-    "pages/Service/poi",
-    "pages/Service/weather",
+    "pages/Service1/poi",
+    "pages/Service1/weather",
     "pages/inputtips/input",
-    "pages/MapPoi/MapPoiHome"
-  
+    "pages/MapPoi/MapPoiHome",
+    "pages/Country/list",
+    "pages/Country/detail",
+    "pages/TravelInfo/list",
+    "pages/TravelInfo/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

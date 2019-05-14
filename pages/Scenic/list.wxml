@@ -2,9 +2,9 @@
 <scroll-view scroll-y='true' class='bg' style='min-height:{{winheight}}px'>
 <view class='bg'>
   <block wx:for='{{list}}'>
-    <view class='item'>
-      <image class='item-img' mode='scaleToFill' style='height: 8rem;' bindtap='scenicClick' data-id='{{item.Id}}' src="{{item.Pic}}" />
-      <label class='title'>{{item.Name}}</label>
+  <view class="image-box">
+        <image class='item-img' mode='scaleToFill'  bindtap='scenicClick' data-id='{{item.Id}}' src="{{item.Pic}}" />
+       <view class='title'>{{item.Name}}</view>
     </view>
   </block>
   <view class='loading'>{{loading}}</view>

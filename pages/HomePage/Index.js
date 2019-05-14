@@ -34,31 +34,7 @@ Page({
     duration: 1000, //滑动动画时间
     circular: true,//是否采用衔接滑动
 
-    //资讯
-   infomationList: [
-      {
-          id: 1,
-          title: "常州乡村旅游节 暨春到茅山赏",
-          url: "https://cztour.sytours.com/Mobile/Service/Index",
-          imageUrl: "http://img1.sytours.com/Upload/City/2016-09-19/1915594261226518.jpg",
-         
-      },
-     
-      {
-        id: 2,
-        title: "蜜月旅拍都来这儿花谷奇缘景区正式成为国家",
-        url: "https://cztour.sytours.com/Mobile/Service/Index",
-        imageUrl: "http://img1.sytours.com/Upload/City/2016-09-19/1915594966950392.jpg",
-         
-      },
-      {
-        id: 3,
-        title: "茅山怡园杯 2018中国茅山",
-        url: "https://cztour.sytours.com/Mobile/Service/Index",
-        imageUrl: "http://img1.sytours.com/Upload/city/20160928/281811194461.jpg",
-         
-      }
-  ],
+    
 
     //菜单
     menuList: [
@@ -77,7 +53,7 @@ Page({
       },
       {
         id: 5, title: "乡村旅游", 
-        
+       
         url: "https://cztour.sytours.com/Mobile/Country/Classify",
    imageUrl: "../../images/menu/ruralTourism.png"
       },
@@ -338,6 +314,13 @@ Page({
         });
         return;
       }
+      else if (dataset.url == this.data.menuList[2].url)
+      {
+        wx.navigateTo({
+          url: '../Scenic/list',
+        });
+        return;
+      }
       else if (dataset.url == this.data.menuList[1].url)
       {
         wx.navigateTo({
@@ -352,6 +335,18 @@ Page({
         });
         return;
       }
+      else if (dataset.url == this.data.menuList[4].url) {
+        wx.navigateTo({
+          url: '../Country/list',
+        });
+        return;
+      }
+      // else if (dataset.url == this.data.menuList[5].url) {
+      //   wx.navigateTo({
+      //     // url: '../TravelInfo/list',
+      //   });
+      //   return;
+      // }
       
 
       wx.navigateTo({
