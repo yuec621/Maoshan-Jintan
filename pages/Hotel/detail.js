@@ -1,5 +1,5 @@
 // pages/Scenic/detail.js
-var domain = "https://cztour.sytours.com";
+var domain = "http://192.168.1.184:53561";
 Page({
 
   /**

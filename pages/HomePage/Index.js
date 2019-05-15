@@ -4,7 +4,7 @@ require("../../utils/myfunc.js")
 //文件引用  
 var CusBase64 = require('../../utils/base64.js');
 var Unionid = ''//储存获取到Unionid
-var domain = 'https://cztour.sytours.com';
+var domain = 'http://192.168.1.184:53561';
 
 Page({
 
@@ -137,7 +137,7 @@ Page({
       }
     }),
     wx.request({
-      url: 'https://cztour.sytours.com/actionapi/HomeRecommend/GetVideoList', //接口地址
+      url: domain +'/actionapi/HomeRecommend/GetVideoList', //接口地址
       header: {
         "Content-Type": "application/json"
       },
@@ -152,7 +152,7 @@ Page({
     }),
     //热门资讯
     wx.request({
-      url: 'https://cztour.sytours.com/actionapi/HomeRecommend/GetSportfulList?p=1&ps=10', //接口地址
+      url: domain +'/actionapi/HomeRecommend/GetSportfulList?p=1&ps=10', //接口地址
         data: {
         },
         header: {
@@ -168,7 +168,7 @@ Page({
       }),
       //热门美食
       wx.request({
-      url: 'https://cztour.sytours.com/actionapi/HomeRecommend/GetSportfulList?p=1&ps=10', //接口地址
+      url: domain +'/actionapi/HomeRecommend/GetSportfulList?p=1&ps=10', //接口地址
         data: {
         },
         header: {

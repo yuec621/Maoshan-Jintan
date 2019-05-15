@@ -1,6 +1,6 @@
 // pages/mine/mineHomePage/mineHomePage.js
 var Unionid = ''//储存获取到Unionid
-var domain ='https://cztour.sytours.com';
+var domain = 'http://192.168.1.184:53561';
 Page({
   
 
@@ -8,6 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    authorized:false,
+    userInfo:null
   },
   myOrderTap: function (e) {
     wx.navigateTo({
@@ -28,13 +30,47 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      // 获取用户信息
-    var that = this;
-    that.setData({
-      userName: wx.getStorageSync('userName'),
-      userHeadImg: wx.getStorageSync('userHeadImg'),
-      userVouchers: wx.getStorageSync('userVouchers')
+    //用户是否授权
+   this. userAuthorized()
+
+  },
+  userAuthorized(){
+    wx.getSetting({
+     success:data=>{
+       //授权
+       if (data.authSetting['scope.userInfo']) {
+         wx.getUserInfo({
+           success:data=>{
+             this.setData({
+              authorized:true,
+              userInfo:data.userInfo
+             })
+           }
+         })
+         //未授权
+       } 
+     }
     })
+  },
+
+  onGetUserInfo(event){
+    const userInfo=event.detail.userInfo
+    if(userInfo){
+      this.setData({
+        authorized:true,
+         userInfo
+       })
+    }
+  
+  },
+
+      // 获取用户信息
+    // var that = this;
+    // that.setData({
+    //   userName: wx.getStorageSync('userName'),
+    //   userHeadImg: wx.getStorageSync('userHeadImg'),
+    //   userVouchers: wx.getStorageSync('userVouchers')
+    // })
  /*   if (wx.getStorageSync('isauth')===1) {
             console.log("isget","yes")
             var that = this;
@@ -109,7 +145,7 @@ Page({
               }
             });
           }*/
-  },
+  // },
  /* agreeGetUser: function (e) {
     this.setData({
       showModel: false

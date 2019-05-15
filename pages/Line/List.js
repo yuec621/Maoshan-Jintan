@@ -1,6 +1,6 @@
 // pages/Line/List.js
 
-var domain='https://cztour.sytours.com';
+var domain = 'http://192.168.1.184:53561';
 var p=1;
 var ps=10;
 Page({

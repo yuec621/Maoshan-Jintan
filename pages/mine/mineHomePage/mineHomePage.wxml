@@ -1,8 +1,19 @@
 <view class='mine-title-container'>
-  <image class='mine-title-img' src='{{userHeadImg}}'></image>
+  <!-- <image class='mine-title-img' src='{{userHeadImg}}'></image> -->
+  <!-- 未授权 -->
+  <v-button wx:if="{{!authorized}}" class='mine-title-img' open-type="getUserInfo" bind:getuserinfo="onGetUserInfo">
+    <image slot="img" class="avatar" src="/images/my.png" />
+  </v-button>
+<!-- 授权 -->
+  <view wx:if="{{authorized}}" class=' mine-title-img' open-type="getUserInfo" bind:getuserinfo="onGetUserInfo">
+    <image src="{{userInfo.avatarUrl}}" class="avatar" />
+    
+  </view>
+
+
   <view class='mine-title-text-container'>
-    <text>{{userName}}</text>
-    <text>
+    <text>{{userInfo.nickName}}</text>
+       <text>
       <text>会员积分：</text>
       <text>{{userVouchers}}</text>
       <text>分</text>
