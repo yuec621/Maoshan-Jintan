@@ -152,7 +152,7 @@ Page({
     }),
     //热门资讯
     wx.request({
-      url: 'https://cztour.sytours.com/actionapi/HomeRecommend/GetVideoList', //接口地址
+      url: 'https://cztour.sytours.com/actionapi/HomeRecommend/GetSportfulList?p=1&ps=10', //接口地址
         data: {
         },
         header: {
@@ -358,6 +358,13 @@ Page({
         }
       });
     }
+  },
+  //热门资讯详情
+  infoClick:function(options){
+    var id = options.target.dataset.id;
+    wx.navigateTo({
+      url: '../TravelInfo/detail?id=' + id,
+    })
   },
   videoMore: function (e) {
     //首页热门视频更多点击事件

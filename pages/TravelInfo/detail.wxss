@@ -1,1 +1,61 @@
 /* pages/TravelInfo/detail.wxss */
+.img{
+    width:100%;
+  }
+  
+  .title{
+    text-align: left;
+    color: #000;
+    display:block;
+    width: 100%;
+    font-size: 1.2rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 1rem;
+    font-weight: 700;
+  }
+  .wesite-title{
+      padding-left: 1rem;
+      color: #ccc;
+      margin-top: 0.8rem;
+     font-size: 0.8rem;
+     margin-bottom: 0.4rem;
+  }
+  .wesite-title p{
+      padding-left: 1rem;
+  }
+  .abstract{
+    
+      overflow: hidden;
+      background-color: #ddd;
+      
+    }
+    .abstract p{
+        background-color: #1d95d4;
+        font-size: 0.8rem;
+        margin-left: 0.6rem;
+    }
+  .abstract view{
+    height: 3rem;
+    width: 88%;
+    
+    float: right;
+    line-height: 1rem;
+    font-size: 0.6rem;
+    
+    text-overflow: ellipsis;
+  }
+  
+  .content{
+    width:98%;
+    margin: auto;
+    font-size: 0.8rem;
+   
+  }
+  .content image{
+    width: 100%;
+    height: auto;
+  }

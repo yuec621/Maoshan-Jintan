@@ -47,8 +47,8 @@
     <view class='bg-line-blue'></view>
         <block wx:for='{{infomationList}}' wx:if="{{index / 3 < 1}}"> 
      
-      <view class='information-list' bindtap='infoClick' data-id='{{item.Id}}' mode='scaleToFill'>
-        <image src="http://www.cztour.com{{item.Pic}}" />
+      <view class='information-list' >
+        <image src="{{item.Pic}}" bindtap='infoClick' data-id="{{item.Id}}" mode='scaleToFill' />
         <view class='information-item-title'>{{item.Name}}</view>
       </view>
     </block> 

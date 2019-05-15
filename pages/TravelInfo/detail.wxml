@@ -1,2 +1,10 @@
 <!--pages/TravelInfo/detail.wxml-->
-<text>pages/TravelInfo/detail.wxml</text>
+<scroll-view scroll-y="true" style="height:{{winHeight}}px;">
+<label class='title'>{{title}}</label>
+<view class="wesite-title">金坛文旅资讯网<p>2019-05-13</p></view>
+  <image class='img' src='{{img}}' style='height: 12rem;' mode='scallToFill'></image>
+   <view class="abstract"><p>摘要</p><view>3月28日2019常州乡村旅游节暨春到茅山赏花季在花谷奇缘景区拉开帷幕。此次活动由常州市文化广电和旅游局、金坛区人民政府主办，江苏省金坛茅山旅游度假区管委会、金坛区文体</view></view>
+   <view class="content">
+    <rich-text nodes="{{content}}"></rich-text>
+  </view>
+</scroll-view>
