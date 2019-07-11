@@ -1,5 +1,5 @@
 // pages/Scenic/detail.js
-var domain = 'http://192.168.1.184:53561';
+var domain = 'https://cztour.sytours.com';
 Page({
 
   /**
@@ -18,7 +18,28 @@ Page({
     price: 0,
     title: '',
     date: '',
-    content: []
+    content: [],
+    name:'五味斋美食系列',
+    
+    indicatorDots: true,//是否出现焦点
+    autoplay: true,//是否自动播放
+    interval: 5000,//自动播放时间
+    duration: 1000, //滑动动画时间
+    circular: true,//是否采用衔接滑动
+
+    //轮播图
+  
+    imgUrls: [
+      {
+          img: 'http://www.cztour.com/Upload/ScenicTicket/201905/09163820900080.png'
+      }, {
+       
+        img: 'http://www.cztour.com/Upload/AdInfo/201806/021612515241562.jpg'
+      }, {
+      
+        img: 'http://www.cztour.com/Upload/AdInfo/201806/021612515241562.jpg'
+      },
+    ],
   },
 
   /**

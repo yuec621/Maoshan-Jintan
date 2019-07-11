@@ -1,5 +1,5 @@
 // pages/Country/list.js
-var domain = 'http://192.168.1.184:53561';
+var domain = 'https://cztour.sytours.com';
 var p = 1;
 var ps = 10;
 Page({

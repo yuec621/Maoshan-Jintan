@@ -41,11 +41,9 @@
   .abstract view{
     height: 3rem;
     width: 88%;
-    
     float: right;
     line-height: 1rem;
     font-size: 0.6rem;
-    
     text-overflow: ellipsis;
   }
   
@@ -53,7 +51,7 @@
     width:98%;
     margin: auto;
     font-size: 0.8rem;
-   
+    text-overflow: ellipsis;
   }
   .content image{
     width: 100%;

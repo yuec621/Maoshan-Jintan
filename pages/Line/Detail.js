@@ -1,5 +1,5 @@
 // pages/Line/Detail.js
-var domain = 'http://192.168.1.184:53561';
+var domain = 'https://cztour.sytours.com';
 Page({
 
   /**

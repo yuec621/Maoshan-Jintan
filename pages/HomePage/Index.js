@@ -4,7 +4,7 @@ require("../../utils/myfunc.js")
 //文件引用  
 var CusBase64 = require('../../utils/base64.js');
 var Unionid = ''//储存获取到Unionid
-var domain = 'http://192.168.1.184:53561';
+var domain = 'https://cztour.sytours.com';
 
 Page({
 
@@ -15,19 +15,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    //轮播图
-    imgUrls: [
-      {
-        link: '/pages/index/index',
-        img: 'http://www.cztour.com/Upload/AdInfo/201804/161336557633981.jpg'
-      }, {
-        link: '/pages/logs/logs',
-        img: 'http://www.cztour.com/pictures/TrustSoft/AdInfo/2018319105514116.jpg'
-      }, {
-        link: '/pages/test/test',
-        img: 'http://www.cztour.com/pictures/TrustSoft/AdInfo/2018319105549106.jpg'
-      }
-    ],
+    
     indicatorDots: true,//是否出现焦点
     autoplay: true,//是否自动播放
     interval: 5000,//自动播放时间
@@ -383,9 +371,12 @@ Page({
   goodsMore: function (e) {
     //首页热门美食更多点击事件
     var dataset = e.currentTarget.dataset;
+    console.log(dataset)
     if (dataset.url) {
       wx.navigateTo({
-        url: '../web-view/webViewPage?url=' + dataset.url,
+        // url: '../web-view/webViewPage?url=' + dataset.url,
+        url: '../food/list',
+
         success: function (res) {
           console.log("goodMoreClick success")
         },

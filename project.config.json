@@ -39,8 +39,16 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "food",
+					"pathName": "pages/Country/detail",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }

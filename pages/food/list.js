@@ -1,5 +1,5 @@
 // pages/Scenic/list.js
-var domain = 'http://192.168.1.184:53561';
+var domain = 'https://cztour.sytours.com';
 var p = 1;
 var ps = 10;
 Page({
@@ -11,7 +11,13 @@ Page({
     winWidth:0,
     winHeight:0,
     list:[],
-    loading: "加载中..."
+    loading: "加载中...",
+    bigTop:
+      {
+         title: "金坛美食·吃不停"
+      },
+    
+    
   },
 
   /**
@@ -31,6 +37,7 @@ Page({
       url: domain + '/actionapi/HomeRecommend/GetSportfulList?p='+p+'&ps='+ps,
         method: 'GET',
         success: function (res) {
+          console.log(res)
             that.setData({
                 list: res.data
             });

@@ -1,17 +1,20 @@
 /* pages/Scenic/list.wxss */
-.bg{
-    background-color: #eee;
+
+.bigImage{
+  margin:0 auto;
+  width:100%;
+  margin-top:0;
 }
-.first-bg{
-  background-color: #fff;
-  overflow: hidden;
-  margin-top: 0.6rem;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+.bigTitle{
+  text-align: center;
+  font-size:16px;
+  padding:40rpx 0;
 }
+
 .title-big{
   font-weight: 700;
   font-size: 24px;
+  margin:10px 0;
 }
 .first-bg p{
   display:inline-block;
@@ -20,8 +23,8 @@
  font-size: 24px;
 }
 .item{
-  width: 30%;
-  height: 220rpx;
+  width: 45%;
+  height: 260rpx;
   border-radius: 8rpx 8rpx 0 0;
   overflow: hidden;
   float: left;

@@ -29,7 +29,8 @@
     "pages/Country/list",
     "pages/Country/detail",
     "pages/TravelInfo/list",
-    "pages/TravelInfo/detail"
+    "pages/TravelInfo/detail",
+    "pages/Service/poi"
     
   ],
   "window": {
@@ -37,6 +38,11 @@
     "navigationBarBackgroundColor": "#F9BE00",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "乐游金坛"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请点击确定"
+    }
   },
   "tabBar": {
     "list": [
