@@ -29,15 +29,14 @@
     "pages/Country/list",
     "pages/Country/detail",
     "pages/TravelInfo/list",
-    "pages/TravelInfo/detail",
-    "pages/Service/poi"
-    
+    "pages/TravelInfo/detail"
+  
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F9BE00",
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "乐游金坛"
+    "navigationBarTitleText": "一部手机游茅山"
   },
   "permission": {
     "scope.userLocation": {

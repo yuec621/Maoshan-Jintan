@@ -1,5 +1,5 @@
 // pages/Scenic/detail.js
-var domain = 'https://cztour.sytours.com';
+var domain = 'https://www.chinamaoshan.cn';
 Page({
 
   /**
@@ -19,7 +19,7 @@ Page({
     title: '',
     date: '',
     content: [],
-    name:'五味斋美食系列',
+    name:'',
     
     indicatorDots: true,//是否出现焦点
     autoplay: true,//是否自动播放
@@ -27,19 +27,6 @@ Page({
     duration: 1000, //滑动动画时间
     circular: true,//是否采用衔接滑动
 
-    //轮播图
-  
-    imgUrls: [
-      {
-          img: 'http://www.cztour.com/Upload/ScenicTicket/201905/09163820900080.png'
-      }, {
-       
-        img: 'http://www.cztour.com/Upload/AdInfo/201806/021612515241562.jpg'
-      }, {
-      
-        img: 'http://www.cztour.com/Upload/AdInfo/201806/021612515241562.jpg'
-      },
-    ],
   },
 
   /**
@@ -59,14 +46,14 @@ Page({
       }
     });
     wx.request({
-      url: domain + '/actionapi/HomeRecommend/GetScenicInfo?id=' + options.id,
+      url: domain + '/actionapi/HomeRecommend/GetCountryInfo?id=' + options.id,
       success: function (res) {
         console.log(res.data);
         var data = res.data;
         that.setData({
-          img: data.pic,
+          imgUrls: data.arry,
           title: data.name,
-          content: data.content,
+          content: data.introduction,
         });
       }
     })

@@ -14,7 +14,7 @@ Page({
     var userid = wx.getStorageSync('userid')
     console.log("userid", userid)
     wx.pro.request({
-      url: 'http://www.cztour.com/actionapi/PersonalCenter/ChangeUser?userName=' + e.detail.value.username +'&userid='+userid,
+      url: 'https://www.cztour.com/actionapi/PersonalCenter/ChangeUser?userName=' + e.detail.value.username +'&userid='+userid,
       /*data:{
         userName: e.detail.value.username,
         userid: userid

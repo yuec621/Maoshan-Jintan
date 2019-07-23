@@ -1,5 +1,5 @@
 // pages/Country/list.js
-var domain = 'https://cztour.sytours.com';
+var domain = 'https://www.chinamaoshan.cn';
 var p = 1;
 var ps = 10;
 Page({
@@ -28,7 +28,7 @@ Page({
         }
     });
     wx.request({
-        url: domain + '/actionapi/HomeRecommend/GetScenicList?p='+p+'&ps='+ps,
+      url: domain + '/actionapi/HomeRecommend/GetCountryList?p='+p+'&ps='+ps,
         method: 'GET',
         success: function (res) {
             that.setData({

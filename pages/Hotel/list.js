@@ -1,5 +1,5 @@
 // pages/Scenic/list.js
-var domain = 'https://cztour.sytours.com';
+var domain = 'https://www.chinamaoshan.cn';
 var p = 1;
 var ps = 10;
 Page({

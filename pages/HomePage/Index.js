@@ -4,7 +4,7 @@ require("../../utils/myfunc.js")
 //文件引用  
 var CusBase64 = require('../../utils/base64.js');
 var Unionid = ''//储存获取到Unionid
-var domain = 'https://cztour.sytours.com';
+var domain = 'https://www.chinamaoshan.cn';
 
 Page({
 
@@ -32,7 +32,7 @@ Page({
       {
         id: 2, title: "美食茅山", url: "https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi", imageUrl: "../../images/menu/maoshanCuisine.png"
       }, {
-        id: 3, title: "旅游攻略", url: "https://cztour.sytours.com//Mobile/TravelNotes/Index", imageUrl: "../../images/menu/tourismStrategy.png"
+        id: 3, title: "旅游攻略", url: "https://www.chinamaoshan.cn/Mobile/TravelNotes/Index", imageUrl: "../../images/menu/tourismStrategy.png"
       },
       {
         id: 4, title: "度假酒店",
@@ -46,7 +46,7 @@ Page({
    imageUrl: "../../images/menu/ruralTourism.png"
       },
       {
-        id: 6, title: "旅游资讯", url: "https://cztour.sytours.com/Mobile/New/Index", imageUrl: "../../images/menu/travelInformation.png"
+        id: 6, title: "旅游资讯", url: "https://www.chinamaoshan.cn/Mobile/News/Index", imageUrl: "../../images/menu/travelInformation.png"
       }
     
     ]
@@ -63,7 +63,10 @@ Page({
     {
     wx.login({
       success: function (res) {
-        console.log("code", res.code)
+        wx.setStorage({
+          key: 'code',
+          data: res.code,
+        });
         if (res.code) {
           console.log("islogin", "yes")
           wx.request({
@@ -84,8 +87,12 @@ Page({
                   key: 'openid',
                   data: res.data.openid,
               });
+              wx.setStorage({
+                key: 'session_key',
+                data: res.data.session_key,
+              });
               if (res.data.success === true) {
-                if (res.data.unionid !== "") {
+                if (res.data.unionid !== null) {
                   that.setData({
                     showModel: true
                   })
@@ -98,6 +105,7 @@ Page({
                     showModel: true
                   })
                   getApp().globalData.session_key = session_key
+                
                   wx.setStorageSync('isauth', 1)
                 }
               }
@@ -111,7 +119,7 @@ Page({
     }
 
     wx.request({
-      url: 'https://cztour.sytours.com/actionapi/HomeRecommend/GetAdList', //接口地址
+      url: domain +'/actionapi/HomeRecommend/GetAdList', //接口地址
       header: {
         "Content-Type": "application/json"
       },
@@ -140,7 +148,7 @@ Page({
     }),
     //热门资讯
     wx.request({
-      url: domain +'/actionapi/HomeRecommend/GetSportfulList?p=1&ps=10', //接口地址
+      url: domain +'/actionapi/HomeRecommend/GetNewsList?p=1&ps=5', //接口地址
         data: {
         },
         header: {
@@ -156,7 +164,7 @@ Page({
       }),
       //热门美食
       wx.request({
-      url: domain +'/actionapi/HomeRecommend/GetSportfulList?p=1&ps=10', //接口地址
+      url: domain +'/actionapi/HomeRecommend/GetSportfulList?p=1&ps=3', //接口地址
         data: {
         },
         header: {
@@ -178,7 +186,7 @@ Page({
     })
     var userinfo = e.detail.userInfo
     Unionid = getApp().globalData.unionid;//获取到的Unionid
-    if (Unionid != null) {
+    if (Unionid !="") {
       var that = this;
       wx.request({
         url: domain + '/actionapi/PersonalCenter/GetPersonInfo?Unionid=' + Unionid + '&openId=' + getApp().globalData.openid + '&nickName=' + userinfo.nickName + '&avatarUrl=' + userinfo.avatarUrl, //根据openid获取用户信息的接口地址
@@ -305,7 +313,7 @@ Page({
       else if (dataset.url == this.data.menuList[2].url)
       {
         wx.navigateTo({
-          url: '../Scenic/list',
+          url:'../web-view/webViewPage?url=' + dataset.url
         });
         return;
       }
@@ -348,11 +356,20 @@ Page({
     }
   },
   //热门资讯详情
-  infoClick:function(options){
-    var id = options.target.dataset.id;
-    wx.navigateTo({
-      url: '../TravelInfo/detail?id=' + id,
-    })
+  infoClick:function(e){
+    var dataset = e.currentTarget.dataset;
+    if (dataset.url) {
+      console.log(dataset.url);
+      console.log(urlhelper.UrlEncode(dataset.url));
+      wx.navigateTo({
+        url: '../web-view/webViewPage?url=' + dataset.url,
+        success: function (res) {
+          console.log("videoClick success")
+        },
+        fail: function (err) {
+        }
+      });
+    }
   },
   videoMore: function (e) {
     //首页热门视频更多点击事件
@@ -385,7 +402,23 @@ Page({
       });
     }
   },
- 
+  newsMore: function (e) {
+    //首页热门新闻更多点击事件
+    var dataset = e.currentTarget.dataset;
+    console.log(dataset)
+    if (dataset.url) {
+      wx.navigateTo({
+        url: '../web-view/webViewPage?url=' + dataset.url,
+       
+
+        success: function (res) {
+          console.log("newsMoreClick success")
+        },
+        fail: function (err) {
+        }
+      });
+    }
+  },
   videoClick: function (e) {
     //首页文章视图点击事件
     var dataset = e.currentTarget.dataset;

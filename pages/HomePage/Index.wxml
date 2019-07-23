@@ -39,7 +39,7 @@
     <span class='label-recommend-label-title'>热门旅游资讯</span>
     </view>
    <view>
-        <span class="more goods-title goods-border"   bindtap='goodsMore' data-url='https://cztour.sytours.com/Mobile/New/Index'>更多</span>
+        <span class="more goods-title goods-border"   bindtap='newsMore' data-url='http://www.chinamaoshan.cn/Mobile/News/Index'>更多</span>
        <span class="more-right">></span>     
      </view>       
   </view>
@@ -48,7 +48,7 @@
         <block wx:for='{{infomationList}}' wx:if="{{index / 3 < 1}}"> 
      
       <view class='information-list' >
-        <image src="{{item.Pic}}" bindtap='infoClick' data-id="{{item.Id}}" mode='scaleToFill' />
+        <image src="{{item.Pic}}" bindtap='infoClick' data-url="{{item.Url}}" mode='scaleToFill' />
         <view class='information-item-title'>{{item.Name}}</view>
       </view>
     </block> 
@@ -65,16 +65,16 @@
     <span class='label-recommend-label-title'>热门旅游视频</span>
     </view>
    <view>
-        <span class="more"  bindtap='videoMore' data-url='https://cztour.sytours.com/mobile/smartvideo/list/1'>更多</span>
+        <span class="more"  bindtap='videoMore' data-url='http://www.chinamaoshan.cn/mobile/TravelVideo/Index'>更多</span>
        <span class="more-right">></span>     
-     </view>       
+     </view>    
   </view>
   <view class='video-recommend'>
     <block wx:for='{{videoList}}' wx:if="{{index / 2 < 1}}">
       <!-- wx:for='{{videoList}}'-->
-      <view class='view-list' bindtap='videoClick' data-url="https://cztour.sytours.com/Mobile/SmartVideo/Video/{{item.Id}}">
+      <view class='view-list' bindtap='videoClick'  data-url="http://www.chinamaoshan.cn/Mobile/TravelVideo/Index/{{item.Id}}">
         <view class='viewImgContainer'>
-          <image src="http://www.cztour.com{{item.Pic}}" class='viewImg' />
+          <image src="http://www.chinamaoshan.cn{{item.Pic}}" class='viewImg' />
           <image src='/images/video_open.png' class='videoOpenImg'></image>
         </view>
         <view class='video-item-title'>{{item.Name}}</view>

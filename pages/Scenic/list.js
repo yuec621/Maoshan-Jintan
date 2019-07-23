@@ -1,5 +1,5 @@
 // pages/Scenic/list.js
-var domain = 'http://192.168.1.184:53561';
+var domain = 'https://www.chinamaoshan.cn';
 var p = 1;
 var ps = 10;
 Page({
@@ -108,6 +108,7 @@ Page({
 
   scenicClick:function(options){
     var id = options.target.dataset.id;
+    console.log(id)
     wx.navigateTo({
       url: 'detail?id=' + id,
     })

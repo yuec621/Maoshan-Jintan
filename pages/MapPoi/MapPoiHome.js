@@ -23,12 +23,14 @@ Page({
   },
   navigatetap:function(e){
     wx.openLocation({
-      latitude: this.data.latitude,
+      latitude: this.data.markers[1].latitude,
       longitude: this.data.longitude,
+     
       scale: 18,
       name: this.data.name,
       address: this.data.address
     })
+    console.log(this.data);
   },
 
   onLoad: function (e) {

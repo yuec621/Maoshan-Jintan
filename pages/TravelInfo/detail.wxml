@@ -5,6 +5,6 @@
   <image class='img' src='{{img}}' style='height: 12rem;' mode='scallToFill'></image>
    <view class="abstract"><p>摘要</p><view>{{content}}</view></view>
    <view class="content">
-    <rich-text nodes="{{content}}"></rich-text>
+    <rich-text class="content" nodes="{{content}}"></rich-text>
   </view>
 </scroll-view>

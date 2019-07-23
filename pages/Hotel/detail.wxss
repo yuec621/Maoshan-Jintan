@@ -20,7 +20,7 @@ swiper{
 .content{
   width:98%;
   margin: auto;
-  font-size:15px;
+
 }
 .content image{
   width: 100%;

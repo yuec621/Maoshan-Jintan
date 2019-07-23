@@ -1,6 +1,6 @@
 // pages/mine/mineHomePage/mineHomePage.js
 var Unionid = ''//储存获取到Unionid
-var domain = 'http://192.168.1.184:53561';
+var domain = 'https://www.chinamaoshan.cn';
 Page({
   
 
