@@ -90,3 +90,18 @@ swiper{
    bottom: 0;
   
 }
+button{
+  margin:1rem 1rem;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+}
+.scenic-book{
+  background-color: #03b391;
+}
+.scenic-nav{
+  background-color: #03b391;
+}
+.scenic-VR{
+  background-color: #03b391;
+}

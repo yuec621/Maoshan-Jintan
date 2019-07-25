@@ -16,6 +16,16 @@
     <rich-text nodes="{{content}}"></rich-text>
   </view>
   <view class="grey"></view>
+   <view class="food-top">
+      <p>更多功能</p>
+      <view class="food-block"></view>
+      
+      <button class="scenic-book">点击预订</button>
+      <button class="scenic-nav">点击导航</button>
+      <button class="scenic-VR">VR预览</button>
+  </view>
+
+<view class="grey"></view>
   <view class="food-bottom">
     <view class="food-top">
       <p>猜你喜欢</p>

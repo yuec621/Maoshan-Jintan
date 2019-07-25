@@ -107,14 +107,14 @@
      
       <view class='scenic-list' >
         <view class="scenic-image">
-       <image src="{{item.Pic}}"  bindtap='foodClick' data-id='{{item.Id}}' mode='scaleToFill' />
+       <image src="{{item.Pic}}"  bindtap='scenicClick' data-id='{{item.Id}}' mode='scaleToFill' />
         </view>
        <view class='scenic-item-title'>{{item.Name}}</view>
         </view>
         </block> 
 
        <view class="information-more" >
-        <span  bindtap='goodsMore' data-url='https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi'>更多</span>
+        <span  bindtap='scenicMore' data-url='https://www.chinamaoshan.cn/Mobile/Scenicintro'>更多</span>
        <span class="more-right">>>></span>    
      </view>
   
@@ -160,7 +160,7 @@
      <view class='food-label-title'>热门推荐</view>
       <view class="recomend-line"></view>
           <view class="food-more">
-        <span bindtap='goodsMore' data-url='https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi'>更多</span>
+        <span bindtap='recomendMore' data-url='https://www.chinamaoshan.cn/Mobile/Scenicintro'>更多</span>
     </view> 
 
     </view>
@@ -173,7 +173,7 @@
     <block wx:for='{{goodsList}}' wx:if="{{index/3<1}}" >
         <view class='recommend-list' >
           <view class="recommend-image">
-               <image src="{{item.Pic}}"  bindtap='foodClick' data-id='{{item.Id}}' mode='scaleToFill' />
+               <image src="{{item.Pic}}"  bindtap='scenicClick' data-id='{{item.Id}}' mode='scaleToFill' />
           </view>
        
         <view class='recommend-item-title'>{{item.Name}}</view>

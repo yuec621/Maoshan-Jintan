@@ -32,8 +32,8 @@
     "pages/TravelInfo/detail",
     "pages/scenicspot/list",
     "pages/scenicspot/detail",
-    "pages/reserve/list",
-    "pages/reserve/detail"
+    "pages/reserve/list"
+
 
   
   ],

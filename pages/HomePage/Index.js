@@ -38,7 +38,7 @@ Page({
         id: 3, title: "茅山·行", url: "https://www.chinamaoshan.cn/Mobile/TravelNotes/Index", imageUrl: "../../images/menu/nav-pic3.png"
       },
       {
-        id: 4, title: "优惠预订", url: "https://www.chinamaoshan.cn/Mobile/News/Index", imageUrl: "../../images/menu/nav-pic6.png"
+        id: 4, title: "优惠预订", url: "../reserve/list", imageUrl: "../../images/menu/nav-pic6.png"
       },
       {
         id: 5, title: "茅山·趣", url: "https://www.chinamaoshan.cn/Mobile/Scenicintro", imageUrl: "../../images/menu/nav-pic1.png"
@@ -46,7 +46,7 @@ Page({
          
       {
         id: 6, title: "茅山·道", 
-        url: "https://www.chinamaoshan.cn/Mobile/Scenicintro",
+        url: "../Country/list",
         imageUrl: "../../images/menu/nav-pic5.png"
       },
       
@@ -322,6 +322,13 @@ Page({
         });
         return;
       }
+      else if (dataset.url == this.data.menuList[7].url)
+      {
+        wx.navigateTo({
+          url:'../web-view/webViewPage?url=' + dataset.url
+        });
+        return;
+      }
       else if (dataset.url == this.data.menuList[0].url)
       {
         wx.navigateTo({
@@ -329,22 +336,29 @@ Page({
         });
         return;
       }
-      
-     
-      else if (dataset.url == this.data.menuList[4].url) {
+      // else if (dataset.url == this.data.menuList[4].url)
+      // {
+      //   wx.navigateTo({
+      //     // url: '../scenicspot/list',
+      //   });
+      //   return;
+      // }
+      else if (dataset.url == this.data.menuList[5].url)
+      {
         wx.navigateTo({
-          url: '../scenicspot/list',
+          url: '../Country/list',
         });
         return;
       }
+     
+     
       else if (dataset.url == this.data.menuList[3].url) {
         wx.navigateTo({
           url: '../reserve/list',
         });
         return;
       }
-      
-
+    }    
       wx.navigateTo({
         url: '../web-view/webViewPage?url=' + dataset.url,
         success: function (res) {
@@ -353,7 +367,7 @@ Page({
         fail: function (err) {
         }
       });
-    }
+    
   },
   //热门资讯详情
   infoClick:function(e){
@@ -402,6 +416,40 @@ Page({
       });
     }
   },
+
+  recomendMore: function (e) {
+    //首页热门推荐更多点击事件
+    var dataset = e.currentTarget.dataset;
+    console.log(dataset)
+    if (dataset.url) {
+      wx.navigateTo({
+        // url: '../web-view/webViewPage?url=' + dataset.url,
+        url: '../reserve/list',
+        success: function (res) {
+          console.log("goodMoreClick success")
+        },
+        fail: function (err) {
+        }
+      });
+    }
+  },
+
+  scenicMore: function (e) {
+    //首页热门美食更多点击事件
+    var dataset = e.currentTarget.dataset;
+    console.log(dataset)
+    if (dataset.url) {
+      wx.navigateTo({
+        url: '../web-view/webViewPage?url=' + dataset.url,
+      
+        success: function (res) {
+          console.log("goodMoreClick success")
+        },
+        fail: function (err) {
+        }
+      });
+    }
+  },
   newsMore: function (e) {
     //首页热门新闻更多点击事件
     var dataset = e.currentTarget.dataset;
@@ -419,6 +467,8 @@ Page({
       });
     }
   },
+
+  
   videoClick: function (e) {
     //首页文章视图点击事件
     var dataset = e.currentTarget.dataset;
@@ -450,6 +500,12 @@ Page({
         }
       });
     }
+  },
+  scenicClick:function(options){
+    var id = options.target.dataset.id;
+    wx.navigateTo({
+      url: '../scenicspot/detail?id=' + id,
+    })
   },
 
   foodClick:function(options){
