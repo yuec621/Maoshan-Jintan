@@ -27,27 +27,37 @@ Page({
     //菜单
     menuList: [
       {
-        id: 1, title: "景点景区", url: "https://cztour.sytours.com/Mobile/ScenicTicket/Classify", imageUrl: "../../images/menu/scenicSpot.png"
+        id: 1, title: "茅山·肴", url: "https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi", imageUrl: "../../images/menu/nav-pic2.png"
       },
       {
-        id: 2, title: "美食茅山", url: "https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi", imageUrl: "../../images/menu/maoshanCuisine.png"
-      }, {
-        id: 3, title: "旅游攻略", url: "https://www.chinamaoshan.cn/Mobile/TravelNotes/Index", imageUrl: "../../images/menu/tourismStrategy.png"
+        id: 2, title: "茅山·居",
+        url: "https://www.chinamaoshan.cn/Mobile/Hotel",
+         imageUrl: "../../images/menu/nav-pic4.png"
       },
       {
-        id: 4, title: "度假酒店",
-        url: "https://m.ctrip.com/webapp/hotel/?from=http%3A%2F%2Fm.ctrip.com%2Fhtml5%2F",
-         imageUrl: "../../images/menu/resortHotel.png"
+        id: 3, title: "茅山·行", url: "https://www.chinamaoshan.cn/Mobile/TravelNotes/Index", imageUrl: "../../images/menu/nav-pic3.png"
       },
       {
-        id: 5, title: "乡村旅游", 
-       
-        url: "https://cztour.sytours.com/Mobile/Country/Classify",
-   imageUrl: "../../images/menu/ruralTourism.png"
+        id: 4, title: "优惠预订", url: "https://www.chinamaoshan.cn/Mobile/News/Index", imageUrl: "../../images/menu/nav-pic6.png"
       },
       {
-        id: 6, title: "旅游资讯", url: "https://www.chinamaoshan.cn/Mobile/News/Index", imageUrl: "../../images/menu/travelInformation.png"
+        id: 5, title: "茅山·趣", url: "https://www.chinamaoshan.cn/Mobile/Scenicintro", imageUrl: "../../images/menu/nav-pic1.png"
+      },
+         
+      {
+        id: 6, title: "茅山·道", 
+        url: "https://www.chinamaoshan.cn/Mobile/Scenicintro",
+        imageUrl: "../../images/menu/nav-pic5.png"
+      },
+      
+
+      {
+        id: 7, title: "茅山·礼", url: "https://www.chinamaoshan.cn/Mobile/TravelVideo/Index", imageUrl: "../../images/menu/nav-pic7.png"
+      },
+      {
+        id: 8, title: "茅山资讯", url: "https://www.chinamaoshan.cn/Mobile/News/Index", imageUrl: "../../images/menu/nav-pic8.png"
       }
+
     
     ]
   },
@@ -146,7 +156,7 @@ Page({
         console.log("res",res.data);
       }
     }),
-    //热门资讯
+    //最新资讯
     wx.request({
       url: domain +'/actionapi/HomeRecommend/GetNewsList?p=1&ps=5', //接口地址
         data: {
@@ -155,6 +165,7 @@ Page({
           "Content-Type": "application/json"
         },
         success: function (res) {
+       
           //将获取到的json数据，存在名字叫goodsList的这个数组中
           that.setData({
             infomationList: res.data
@@ -303,13 +314,7 @@ Page({
         });
         return;
       }
-      else if (dataset.url == this.data.menuList[0].url)
-      {
-        wx.navigateTo({
-          url: '../Scenic/list',
-        });
-        return;
-      }
+     
       else if (dataset.url == this.data.menuList[2].url)
       {
         wx.navigateTo({
@@ -317,7 +322,7 @@ Page({
         });
         return;
       }
-      else if (dataset.url == this.data.menuList[1].url)
+      else if (dataset.url == this.data.menuList[0].url)
       {
         wx.navigateTo({
           url: '../food/list',
@@ -325,24 +330,19 @@ Page({
         return;
       }
       
-      else if (dataset.url == this.data.menuList[3].url) {
-        wx.navigateTo({
-          url: '../Hotel/list',
-        });
-        return;
-      }
+     
       else if (dataset.url == this.data.menuList[4].url) {
         wx.navigateTo({
-          url: '../Country/list',
+          url: '../scenicspot/list',
         });
         return;
       }
-      // else if (dataset.url == this.data.menuList[5].url) {
-      //   wx.navigateTo({
-      //     // url: '../TravelInfo/list',
-      //   });
-      //   return;
-      // }
+      else if (dataset.url == this.data.menuList[3].url) {
+        wx.navigateTo({
+          url: '../reserve/list',
+        });
+        return;
+      }
       
 
       wx.navigateTo({

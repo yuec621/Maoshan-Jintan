@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -53,7 +53,7 @@
 				{
 					"id": 0,
 					"name": "food",
-					"pathName": "pages/food/detail",
+					"pathName": "pages/reserve/detail",
 					"query": "",
 					"scene": null
 				}

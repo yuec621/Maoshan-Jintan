@@ -29,12 +29,17 @@
     "pages/Country/list",
     "pages/Country/detail",
     "pages/TravelInfo/list",
-    "pages/TravelInfo/detail"
+    "pages/TravelInfo/detail",
+    "pages/scenicspot/list",
+    "pages/scenicspot/detail",
+    "pages/reserve/list",
+    "pages/reserve/detail"
+
   
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F9BE00",
+    "navigationBarBackgroundColor": "#03b391",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "一部手机游茅山"
   },
@@ -48,24 +53,24 @@
       {
         "pagePath": "pages/HomePage/Index",
         "text": "首页",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/home_click.png"
+        "iconPath": "images/tabar/home.png",
+        "selectedIconPath": "images/tabar/home_click.png"
       },
       {
         "pagePath": "pages/MapPoi/MapPoiHome",
         "text": "旅游地图",
-        "iconPath": "images/map.png",
-        "selectedIconPath": "images/map_click.png"
+        "iconPath": "images/tabar/map.png",
+        "selectedIconPath": "images/tabar/map_click.png"
       },
       {
         "pagePath": "pages/mine/mineHomePage/mineHomePage",
         "text": "个人中心",
-        "iconPath": "images/personal.png",
-        "selectedIconPath": "images/personal_click.png"
+        "iconPath": "images/tabar/personal.png",
+        "selectedIconPath": "images/tabar/personal_click.png"
       }
     ],
     "color": "#7f7e7e",
-    "selectedColor": "#F9BE00",
+    "selectedColor": "#03b391",
     "borderStyle": "white",
     "backgroundColor": "#fff"
   },

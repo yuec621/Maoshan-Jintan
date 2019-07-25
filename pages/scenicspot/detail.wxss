@@ -57,7 +57,10 @@ swiper{
     background-color: white;
   margin: auto;
     padding-top: 1rem;
+   
+
  
+  
 }
 .recommend-list {
   width: 44%;
@@ -65,7 +68,6 @@ swiper{
   float: left;
   position: relative;
   margin: 0 0 0.6rem 0.6rem;
-  border:1px solid red;
  
 }
 .recommend-list .recommend-image{

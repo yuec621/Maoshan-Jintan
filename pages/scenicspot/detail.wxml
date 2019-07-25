@@ -24,17 +24,13 @@
        <view class='view-recommend'>
     
         <block wx:for='{{goodsList}}' wx:if="{{index/2<1}}" >
-        
-             <view class='recommend-list' >
+        <view class='recommend-list' >
           <view class="recommend-image">
                <image src="{{item.Pic}}"  bindtap='foodClick' data-id='{{item.Id}}' mode='scaleToFill' />
           </view>
        
         <view class='recommend-item-title'>{{item.Name}}</view>
       </view>
-       
-       
-    
     </block>
     
     

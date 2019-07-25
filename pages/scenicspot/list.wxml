@@ -1,0 +1,34 @@
+<!--pages/Scenic/list.wxml-->
+<scroll-view scroll-y='true' class='bg' style='min-height:{{winheight}}px'>
+<view class='bg'>
+  <view class="first-bg">
+     <image class="bigImage" src="../../images/food/food.png" ></image>
+    <view class="bigTitle" >{{bigTop.title}}</view>
+              
+    <block wx:for='{{list}}'>
+      
+     <view class='item'>
+      <image class='item-img' mode='scaleToFill'  bindtap='foodClick' data-id='{{item.Id}}' src="{{item.Pic}}" />
+      <view class="block-image">景点</view>
+     <view class="image-title">{{item.Name}}</view>
+     <view class="image-abs">{{item.Name}}vfvfrvbgrbvrfbvrbvrgfrbvfggfbfdfgbvdcvfdvfdv</view>
+    </view>
+    
+  </block>
+
+  <block wx:for='{{list}}'>
+      
+     <view class='item'>
+      <image class='item-img' mode='scaleToFill'  bindtap='foodClick' data-id='{{item.Id}}' src="{{item.Pic}}" />
+      <view class="block-image">乡村游</view>
+     <view class="image-title">{{item.Name}}</view>
+     <view class="image-abs">{{item.Name}}vfvfrvbgrbvrfbvrbvrgfrbvfggfbfdfgbvdcvfdvfdv</view>
+    </view>
+    
+  </block>
+  
+</view>
+
+  <view class='loading'>{{loading}}</view>
+</view>
+</scroll-view>

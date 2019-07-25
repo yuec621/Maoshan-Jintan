@@ -9,20 +9,19 @@
     </block>
   </swiper>
 
-  <!--分割带-->
-  <view class='grey'></view>
+ 
 
   <!--菜单-->
   <view class='table-menu'>
     <block>
       <view class="tr bg-g">
-        <view class="td" wx:for="{{menuList}}" wx:if="{{index / 3 < 1}}" bindtap='menuClick' data-url='{{menuList[index].url}}'>
-          <image src="{{menuList[index].imageUrl}}" mode='widthFix' />
+        <view class="td" wx:for="{{menuList}}" wx:if="{{index / 4< 1}}" bindtap='menuClick' data-url='{{menuList[index].url}}'>
+          <image src="{{menuList[index].imageUrl}}" class="td_image" mode='widthFix' />
           <view class='menu-title'>{{menuList[index].title}}</view>
         </view>
       </view>
       <view class="tr">
-        <view class="td" wx:for="{{menuList}}" wx:if="{{index / 3 >= 1}}" bindtap='menuClick' data-url='{{menuList[index].url}}'>
+        <view class="td" wx:for="{{menuList}}" wx:if="{{index / 4 >= 1}}" bindtap='menuClick' data-url='{{menuList[index].url}}'>
           <image src="{{menuList[index].imageUrl}}" mode='widthFix' />
           <view class='menu-title'>{{menuList[index].title}}</view>
         </view>
@@ -34,24 +33,32 @@
    <view class='grey'></view>
   <!--资讯推荐-->
    <view class='label-recommend-label-line goods-line'>
-  <view>
+  <view class="box-recommend">
   <span class='label-recommend-label-block'></span>
-    <span class='label-recommend-label-title'>热门旅游资讯</span>
+    <span class='label-recommend-label-title'>最新资讯</span>
+    <span class='label-recommend-label-small'>最新资讯 . 汇聚于此</span>
     </view>
-   <view>
-        <span class="more goods-title goods-border"   bindtap='newsMore' data-url='http://www.chinamaoshan.cn/Mobile/News/Index'>更多</span>
-       <span class="more-right">></span>     
-     </view>       
+       
   </view>
    <view class='information-recommend'>
     <view class='bg-line-blue'></view>
-        <block wx:for='{{infomationList}}' wx:if="{{index / 3 < 1}}"> 
+        <block wx:for='{{infomationList}}' wx:if="{{index / 6 < 1}}"> 
      
       <view class='information-list' >
+        <view class="information-image">
         <image src="{{item.Pic}}" bindtap='infoClick' data-url="{{item.Url}}" mode='scaleToFill' />
-        <view class='information-item-title'>{{item.Name}}</view>
+        </view>
+        <view class='information-item-title' >
+        <view >{{item.Name}}</view>
+        <view class="information-date">{{item.AddTime}}33</view>
+        </view>
       </view>
     </block> 
+
+       <view class="information-more" >
+        <span    bindtap='newsMore' data-url='https://www.chinamaoshan.cn/Mobile/News/Index'>更多</span>
+       <span class="more-right">>>></span>     
+     </view>
   
   </view>
 
@@ -60,49 +67,117 @@
    <view class='grey'></view>
   <!--视频推荐-->
   <view class='label-recommend-label-line'>
-  <view>
+  <view class="box-recommend">
   <span class='label-recommend-label-block'></span>
-    <span class='label-recommend-label-title'>热门旅游视频</span>
+    <span class='label-recommend-label-title'>旅游视频</span>
     </view>
-   <view>
-        <span class="more"  bindtap='videoMore' data-url='http://www.chinamaoshan.cn/mobile/TravelVideo/Index'>更多</span>
-       <span class="more-right">></span>     
-     </view>    
+      
   </view>
   <view class='video-recommend'>
-    <block wx:for='{{videoList}}' wx:if="{{index / 2 < 1}}">
+    <block wx:for='{{videoList}}' wx:if="{{index / 1 < 1}}">
       <!-- wx:for='{{videoList}}'-->
-      <view class='view-list' bindtap='videoClick'  data-url="http://www.chinamaoshan.cn/Mobile/TravelVideo/Index/{{item.Id}}">
+      <view class='view-list' bindtap='videoClick'  data-url="https://www.chinamaoshan.cn/Mobile/TravelVideo/Index/{{item.Id}}">
         <view class='viewImgContainer'>
-          <image src="http://www.chinamaoshan.cn{{item.Pic}}" class='viewImg' />
+          <image src="https://www.chinamaoshan.cn{{item.Pic}}" class='viewImg' />
           <image src='/images/video_open.png' class='videoOpenImg'></image>
         </view>
-        <view class='video-item-title'>{{item.Name}}</view>
+      
       </view>
     </block>
-
+<view class="information-more">
+        <span  bindtap='videoMore' data-url='https://www.chinamaoshan.cn/mobile/TravelVideo/Index'>更多</span>
+       <span class="more-right">>>></span>   
+     </view> 
   </view>
   <!--分割带-->
    <view class='grey'></view>
-  <!--美食推荐-->
+
+ <!--景点景区-->
    <view class='label-recommend-label-line goods-line'>
-  <view>
+  <view class="box-recommend">
   <span class='label-recommend-label-block'></span>
-    <span class='label-recommend-label-title'>热门旅游美食</span>
+    <span class='label-recommend-label-title'>景点景区</span>
+    <span class='label-recommend-label-small'>探索你所未知的美景</span>
     </view>
-   <view>
-        <span class="more goods-title goods-border"   bindtap='goodsMore' data-url='https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi'>更多</span>
-       <span class="more-right">></span>     
-     </view>       
+    
+  </view>
+  <view class='information-recommend'>
+    <view class='bg-line-blue'></view>
+        <block wx:for='{{goodsList}}' wx:if="{{index / 3 < 1}}"> 
+     
+      <view class='scenic-list' >
+        <view class="scenic-image">
+       <image src="{{item.Pic}}"  bindtap='foodClick' data-id='{{item.Id}}' mode='scaleToFill' />
+        </view>
+       <view class='scenic-item-title'>{{item.Name}}</view>
+        </view>
+        </block> 
+
+       <view class="information-more" >
+        <span  bindtap='goodsMore' data-url='https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi'>更多</span>
+       <span class="more-right">>>></span>    
+     </view>
+  
+  </view>
+
+
+ <!--分割带-->
+   <view class='grey'></view>
+
+  <!--美食特产-->
+   <view class='label-recommend-label-line goods-line'>
+  <view class="box1-recommend">
+      <view class='food-label-title'>美食特产</view>
+      <view class="recomend-line"></view>
+       <view class="food-more">
+        <span bindtap='goodsMore' data-url='https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi'>更多</span>
+    </view>  
+    </view>
+       
   </view>
 
   <view class='view-recommend'>
     <view class='bg-line-blue'></view>
    
-    <block wx:for='{{goodsList}}' wx:if="{{index/6<1}}" >
+    <block wx:for='{{goodsList}}' wx:if="{{index/3<1}}" >
         <view class='recommend-list' >
-        <image src="{{item.Pic}}"  bindtap='foodClick' data-id='{{item.Id}}' mode='scaleToFill' />
+          <view class="recommend-image">
+               <image src="{{item.Pic}}"  bindtap='foodClick' data-id='{{item.Id}}' mode='scaleToFill' />
+          </view>
+       
         <view class='recommend-item-title'>{{item.Name}}</view>
+      </view>
+    </block>
+  
+  </view>
+
+  <!--分割带-->
+   <view class='grey'></view>
+
+  <!--热门推荐-->
+   <view class='label-recommend-label-line goods-line'>
+  <view class="box1-recommend">
+     <view class='food-label-title'>热门推荐</view>
+      <view class="recomend-line"></view>
+          <view class="food-more">
+        <span bindtap='goodsMore' data-url='https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi'>更多</span>
+    </view> 
+
+    </view>
+         
+  </view>
+
+  <view class='view-recommend'>
+    <view class='bg-line-blue'></view>
+   
+    <block wx:for='{{goodsList}}' wx:if="{{index/3<1}}" >
+        <view class='recommend-list' >
+          <view class="recommend-image">
+               <image src="{{item.Pic}}"  bindtap='foodClick' data-id='{{item.Id}}' mode='scaleToFill' />
+          </view>
+       
+        <view class='recommend-item-title'>{{item.Name}}</view>
+        <view class='recommend-item-ticket'>￥50起</view>
       </view>
     </block>
   

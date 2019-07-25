@@ -19,14 +19,14 @@ swiper {
 
 .grey {
   width: 100%;
-  height: 0.3rem;
-  background-color: #ddd;
+  height: 26px;
+  background-color: #f6f6f6;
 }
 
 /*首页菜单*/
 
 .table-menu {
-  margin: 1.6rem 0 1.6rem 0;
+  margin: 1rem 0 2rem 0;
 
 }
 
@@ -37,18 +37,25 @@ swiper {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  
+  
 }
 
 .td {
   width: 25%;
   text-align: center;
   font-size: 0.8rem;
-  margin-top: 0.4rem;
+  margin-top: 1rem;
+ 
 }
 
 .td image {
-  width: 80%;
+  width: 54%;
   height: auto;
+}
+.td .menu-title{
+  font-size: 12.6px;
+  
 }
 
 /*视频推荐*/
@@ -60,6 +67,7 @@ swiper {
   width: 90%;
   text-align: center;
   overflow: hidden;
+  margin-top: 20px;
 }
 
 
@@ -73,52 +81,91 @@ swiper {
   justify-content: space-between;
 
 }
+.box-recommend{
+  margin-top:1rem;
+  display: flex;
+  height:24px;
+  
+  
+}
+.box1-recommend{
+  margin-top:1rem;
+  display: flex;
+  height:24px;
+  
+  margin-right:0.8rem;
+  width:100%;
+  align-items: center;
+  justify-content: space-between;
+    
+  
+}
+.food-more{
+  text-align: right;
+  color:#03b391;
+  float:right;
+  font-size:14px;
+
+}
+.recomend-line{
+  border:1px solid #f5f5f5;
+  width:200px;
+
+}
+.food-label-title{
+  margin-left: 0.6rem;
+  height: 24px;
+   line-height: 24px;
+  margin-right:14px;
+}
 
 .label-recommend-label-block {
-margin-left: 0.6rem;
-  width: 0.8rem;
-  height: 1.4rem;
-  border: 1px solid #F9BE00;
+  margin-left: 0.6rem;
+  height: 24px;
+  width:6px;
+  background-color: #03b391;
+  display: block;
+  line-height: 22px;
+  margin-right:12px;
 }
 
 .label-recommend-label-title {
   display: inline-block;
-  font-family: '宋体';
-  font-weight: bolder;
-  font-size: 0.9rem;
+  font-weight: 550;
+  font-size: 22px;
   margin-left: 0.4rem;
-}
-
-.more {
-  color: #aaa;
-  font-size: 13px;
-  padding: 0;
-  height: 16px;
-  line-height: 16px;
+  line-height: 22px;
 
 }
-
-.more-right {
-  display: inline-block;
-  color: #aaa;
-  font-size: 15px;
-  padding: 0 2px;
-  margin-right: 1rem;
-  height: 16px;
-  line-height: 16px;
-
+.label-recommend-label-small{
+  color:#8c8c8c;
+  display:block;
+   margin-left:12px;
+  font-size: 14px;
 }
+
+
 
 .view-recommend {
-  margin: 0 auto;
-  overflow: hidden;
+  clear: both;
+   overflow: hidden;
   margin-left: 0.3rem;
+    background-color: white;
+  margin: auto;
+    padding-top: 1rem;
+
+ 
+  
 }
 
 .information-recommend {
-  margin: 0 auto;
+  clear: both;
   overflow: hidden;
   margin-left: 0.3rem;
+  background-color: white;
+  margin: auto;
+  width: 90%;
+ 
 }
 
 .view-list {
@@ -127,13 +174,6 @@ margin-left: 0.6rem;
   margin-bottom: 20rpx;
 }
 
-
-.video-item-title {
-  width: 100%;
-  text-align: center;
-  font-size: 30rpx;
-  margin-top: 10rpx;
-}
 
 .viewImgContainer {
   width: 100%;
@@ -144,7 +184,7 @@ margin-left: 0.6rem;
 .viewImg {
   width: 100%;
   height: 300rpx;
-  border-radius: 10rpx;
+  
 }
 
 .videoOpenImg {
@@ -164,78 +204,124 @@ margin-left: 0.6rem;
 } */
 
 .recommend-list {
-  width: 28%;
-  height: 200rpx;
-  border-radius: 8rpx;
+  width: 29%;
+  
   overflow: hidden;
   float: left;
   position: relative;
-  margin: 0 0 0.6rem 0.86rem;
-
+  margin: 0 0 0.6rem 0.6rem;
+ 
+}
+.recommend-list .recommend-image{
+  height:100px;
+ 
+ 
+}
+.recommend-list .recommend-image image{
+  width:100%;
+  height:100%;
+ 
+ 
+}
+.recommend-list .recommend-item-title{
+  height:40px;
+ line-height: 40px;
+  text-overflow: ellipsis;
+ text-align: center;
+  font-size: 14px;
+   bottom: 0;
+  
+}
+.recommend-item-ticket{
+  height:40px;
+  line-height: 40px;
+   text-overflow: ellipsis;
+  text-align: center;
+   font-size: 12px;
+    bottom: 0;
+   color:#03b391;
 }
 
 .information-list {
-  width: 29%;
-  height: 220rpx;
-  border-radius: 6rpx;
-  overflow: hidden;
-  float: left;
-  position: relative;
-  margin: 0 0 0.6rem 0.68rem;
-  box-shadow: 0.1rem 0.1rem 0.1rem #ddd;
-}
-
-.recommend-list image {
   width: 100%;
   height: 200rpx;
+  box-shadow: 0 0.05rem 0 #ccc;
+  padding:29px 0;
+   display:flex;
+   
+ 
+   
+}
+.scenic-list{
+  width: 100%;
+   box-shadow: 0 0.05rem 0 #ccc;
+  padding: 2rem 0;
 }
 
-.information-list image {
+.scenic-image{
   width: 100%;
-  height: 140rpx;
+  height: 270px;
+ 
 }
+.scenic-image image{
+  width: 100%;
+  height: 100%;
+ 
+}
+.scenic-item-title{
+
+  margin-top:1rem;
+  font-size: 16px;
+  font-weight: 540;
+}
+
+
+
+.information-list  .information-image{
+ 
+  width:46%;
+  height:100%;
+
+}
+
+.information-list .information-image image {
+  width: 100%;
+  height: 100%;
+  }
 
 .information-item-title {
-  width: 100%;
-  height: 50rpx;
-  line-height: 50rpx;
-  overflow-x: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-align: center;
-  font-size: 28rpx;
-  position: absolute;
-  bottom: 0;
+  margin-left: 20px;
+   font-size: 14px;
+   font-weight: 500;
+   position:relative;
+  
+   width:70%;
+   
+ 
+}
+.information-date{
+  color:#8c8c8c;
+ position: absolute;
+  bottom:0;
+  font-size: 14px;
+ 
+}
+.information-more{
+  color:#03b391;
+  height:60px;
+  line-height: 60px;
+  text-align: right;
+  font-size:14px;
+  
+}
+
+.information-more .more-right{
+  color:#03b391;
+
 }
 
 
-.recommend-item-title {
-  width: 100%;
-  height: 50rpx;
-  line-height: 50rpx;
-  overflow-x: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-align: center;
-  font-size: 28rpx;
-  background: rgba(0, 0, 0, 0.45);
-  color: #fff;
-  position: absolute;
-  bottom: 0;
-}
 
-
-/* .goods-title {
-  color: #78aa47;
-} */
-
-/* .goods-line {
-  background-color: #78aa47;
-} */
-
-/* .goods-border {
-  border-color: #78aa47;
-} */
 
 /* 弹窗 */
 

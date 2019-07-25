@@ -1,0 +1,27 @@
+ <!--美食推荐-->
+   <view class='label-recommend-label-line goods-line'>
+  <view class="box-recommend">
+  <span class='label-recommend-label-block'></span>
+    <span class='label-recommend-label-title'>景点景区</span>
+    <span class='label-recommend-label-small'>探索你所未知的美景</span>
+    </view>
+    
+  </view>
+  <view class='information-recommend'>
+    <view class='bg-line-blue'></view>
+        <block wx:for='{{goodsList}}' wx:if="{{index / 3 < 1}}"> 
+     
+      <view class='scenic-list' >
+        <view class="scenic-image">
+       <image src="{{item.Pic}}"  bindtap='foodClick' data-id='{{item.Id}}' mode='scaleToFill' />
+        </view>
+       <view class='scenic-item-title'>{{item.Name}}</view>
+        </view>
+        </block> 
+
+       <view class="information-more" >
+        <span  bindtap='goodsMore' data-url='https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi'>更多</span>
+       <span class="more-right">>>></span>    
+     </view>
+  
+  </view>

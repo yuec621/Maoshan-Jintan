@@ -121,11 +121,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  foodClick:function(options){
-    var id = options.target.dataset.id;
-    wx.navigateTo({
-      url: '../food/detail?id=' + id,
-    })
   }
 })
