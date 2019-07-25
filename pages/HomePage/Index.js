@@ -336,13 +336,7 @@ Page({
         });
         return;
       }
-      // else if (dataset.url == this.data.menuList[4].url)
-      // {
-      //   wx.navigateTo({
-      //     // url: '../scenicspot/list',
-      //   });
-      //   return;
-      // }
+      
       else if (dataset.url == this.data.menuList[5].url)
       {
         wx.navigateTo({
