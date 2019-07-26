@@ -81,8 +81,9 @@
 .loading{
   clear: both;
   width:100%;
-  height: 46px;
+  height: 40px;
   background-color: #eee;
   line-height: 46px;
   text-align: center;
+  font-size:12px;
 }

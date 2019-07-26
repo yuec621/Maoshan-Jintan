@@ -1,4 +1,7 @@
 <scroll-view class='container-home' scroll-y='true'>
+  <view class="search">
+    <input bindtap='searchClick'  class="input" placeholder="搜索景点/美食/酒店/关键词"/>
+  </view>
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='{{circular}}' indicator-active-color="#F9BE00" >
     <block wx:for="{{imgUrls}}">
       <swiper-item>
@@ -50,7 +53,7 @@
         </view>
         <view class='information-item-title' >
         <view >{{item.Name}}</view>
-        <view class="information-date">{{item.AddTime}}33</view>
+        <view class="information-date">{{item.AddTime}}</view>
         </view>
       </view>
     </block> 
@@ -103,18 +106,18 @@
   </view>
   <view class='information-recommend'>
     <view class='bg-line-blue'></view>
-        <block wx:for='{{goodsList}}' wx:if="{{index / 3 < 1}}"> 
+        <block wx:for='{{scenicList}}' wx:if="{{index / 3 < 1}}"> 
      
       <view class='scenic-list' >
         <view class="scenic-image">
-       <image src="{{item.Pic}}"  bindtap='foodClick' data-id='{{item.Id}}' mode='scaleToFill' />
+       <image src="{{item.pic}}"  bindtap='scenicClick' data-id='{{item.id}}' mode='scaleToFill' />
         </view>
-       <view class='scenic-item-title'>{{item.Name}}</view>
+       <view class='scenic-item-title'>{{item.name}}</view>
         </view>
         </block> 
 
        <view class="information-more" >
-        <span  bindtap='goodsMore' data-url='https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi'>更多</span>
+        <span  bindtap='scenicMore' data-url='https://www.chinamaoshan.cn/Mobile/Scenicintro'>更多</span>
        <span class="more-right">>>></span>    
      </view>
   
@@ -160,7 +163,7 @@
      <view class='food-label-title'>热门推荐</view>
       <view class="recomend-line"></view>
           <view class="food-more">
-        <span bindtap='goodsMore' data-url='https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi'>更多</span>
+        <span bindtap='recomendMore' data-url='https://www.chinamaoshan.cn/Mobile/Scenicintro'>更多</span>
     </view> 
 
     </view>
@@ -170,14 +173,14 @@
   <view class='view-recommend'>
     <view class='bg-line-blue'></view>
    
-    <block wx:for='{{goodsList}}' wx:if="{{index/3<1}}" >
+    <block wx:for='{{scenicList}}' wx:if="{{index/3<1}}" >
         <view class='recommend-list' >
           <view class="recommend-image">
-               <image src="{{item.Pic}}"  bindtap='foodClick' data-id='{{item.Id}}' mode='scaleToFill' />
+               <image src="{{item.pic}}"  bindtap='scenicClick' data-id='{{item.id}}' mode='scaleToFill' />
           </view>
        
-        <view class='recommend-item-title'>{{item.Name}}</view>
-        <view class='recommend-item-ticket'>￥50起</view>
+        <view class='recommend-item-title'>{{item.name}}</view>
+      
       </view>
     </block>
   

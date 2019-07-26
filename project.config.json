@@ -48,12 +48,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": 0,
 					"name": "food",
-					"pathName": "pages/reserve/detail",
+					"pathName": "pages/scenicspot/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "food",
+					"pathName": "pages/search/list",
 					"query": "",
 					"scene": null
 				}

@@ -14,7 +14,7 @@ Page({
     loading: "加载中...",
     bigTop:
       {
-         title: "金坛美食·吃不停"
+         title: "特色景点·玩不停"
       },
     
     
@@ -34,12 +34,13 @@ Page({
         }
     });
     wx.request({
-      url: domain + '/actionapi/HomeRecommend/GetSportfulList?p='+p+'&ps='+ps,
+      url: domain + '/actionapi/HomeRecommend/GetScenicList?p='+p+'&ps='+ps,
         method: 'GET',
         success: function (res) {
           console.log(res)
             that.setData({
-                list: res.data
+                list: res.data.scintic,
+                list1: res.data.country
             });
         }
     });
@@ -86,7 +87,7 @@ Page({
   onReachBottom: function () {
     var that = this;
     wx.request({
-      url: domain + '/actionapi/HomeRecommend/GetSportfulList?p=' + (p + 1) + "&ps=" + ps,
+      url: domain + '/actionapi/HomeRecommend/GetScenicInfo?p=' + (p + 1) + "&ps=" + ps,
         success: function (res) {
             if (res.data.length == 0) {
                 that.setData({
@@ -113,10 +114,17 @@ Page({
   
   },
 
-  foodClick:function(options){
+  scenicClick:function(options){
     var id = options.target.dataset.id;
     wx.navigateTo({
-      url: 'detail?id=' + id,
+      url: '../scenicspot/detail?id=' + id,
+    })
+  },
+
+  countryClick:function(options){
+    var id = options.target.dataset.id;
+    wx.navigateTo({
+      url: '../Country/detail?id=' + id,
     })
   }
 })

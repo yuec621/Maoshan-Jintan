@@ -34,12 +34,13 @@ Page({
         }
     });
     wx.request({
-      url: domain + '/actionapi/HomeRecommend/GetSportfulList?p='+p+'&ps='+ps,
+      url: domain + '/actionapi/HomeRecommend/Getorder',
         method: 'GET',
         success: function (res) {
-          console.log(res)
+          console.log(res.data.HotelList)
             that.setData({
-                list: res.data
+                list: res.data.HotelList,
+                list1: res.data.SenticList,
             });
         }
     });
@@ -121,7 +122,6 @@ Page({
       wx.navigateTo({
         url: '../web-view/webViewPage?url=' + dataset.url,
     
-
         success: function (res) {
           console.log("goodMoreClick success")
         },

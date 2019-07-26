@@ -2,27 +2,27 @@
 <scroll-view scroll-y='true' class='bg' style='min-height:{{winheight}}px'>
 <view class='bg'>
   <view class="first-bg">
-     <image class="bigImage" src="../../images/food/food.png" ></image>
+     <image class="bigImage" src="../../images/scenic/scenic.png" ></image>
     <view class="bigTitle" >{{bigTop.title}}</view>
               
     <block wx:for='{{list}}'>
       
      <view class='item'>
-      <image class='item-img' mode='scaleToFill'  bindtap='foodClick' data-id='{{item.Id}}' src="{{item.Pic}}" />
+      <image class='item-img' mode='scaleToFill'  bindtap='scenicClick' data-id='{{item.id}}' src="{{item.pic}}" />
       <view class="block-image">景点</view>
-     <view class="image-title">{{item.Name}}</view>
-     <view class="image-abs">{{item.Name}}vfvfrvbgrbvrfbvrbvrgfrbvfggfbfdfgbvdcvfdvfdv</view>
+     <view class="image-title">{{item.name}}</view>
+     <view class="image-abs">{{item.breif}}</view>
     </view>
     
   </block>
 
-  <block wx:for='{{list}}'>
+  <block wx:for='{{list1}}'>
       
      <view class='item'>
-      <image class='item-img' mode='scaleToFill'  bindtap='foodClick' data-id='{{item.Id}}' src="{{item.Pic}}" />
+      <image class='item-img' mode='scaleToFill'  bindtap='countryClick' data-id='{{item.id}}' src="{{item.pic}}" />
       <view class="block-image">乡村游</view>
-     <view class="image-title">{{item.Name}}</view>
-     <view class="image-abs">{{item.Name}}vfvfrvbgrbvrfbvrbvrgfrbvfggfbfdfgbvdcvfdvfdv</view>
+     <view class="image-title">{{item.name}}</view>
+     <view class="image-abs">{{item.description}}</view>
     </view>
     
   </block>

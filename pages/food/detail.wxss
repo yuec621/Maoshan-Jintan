@@ -50,7 +50,7 @@ swiper{
   margin:8px auto;
 
 }
-.view-recommend {
+/* .view-recommend {
   clear: both;
    overflow: hidden;
   margin-left: 0.3rem;
@@ -58,14 +58,16 @@ swiper{
   margin: auto;
     padding-top: 1rem;
  
-}
+} */
 .recommend-list {
   width: 44%;
-  overflow: hidden;
-  float: left;
+  /* overflow: hidden;
+  float: left; */
   position: relative;
-  margin: 0 0 0.6rem 0.6rem;
-  border:1px solid red;
+  margin: -1rem 0 0.6rem 0.6rem;
+  display: inline-block;
+  height:100px;
+
  
 }
 .recommend-list .recommend-image{

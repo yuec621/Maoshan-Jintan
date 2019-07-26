@@ -44,14 +44,16 @@ Page({
       }
     });
     wx.request({
-      url: domain + '/actionapi/HomeRecommend/GetSportfulInfo?id=' + options.id,
+      url: domain + '/actionapi/HomeRecommend/GetScenicInfo?id=' + options.id,
       success: function (res) {
-        console.log(res.data);
+        console.log(res.data.arry);
         var data = res.data;
         that.setData({
           imgUrls:data.arry,
           title: data.name,
-          content: data.introduction,
+          content: data.content,
+          scientList:data.scientList
+       
         });
       }
     }),
@@ -72,6 +74,23 @@ Page({
           })
         }
       })
+  },
+
+  //点击导航
+  bookScenic:function(e){
+    var dataset = e.currentTarget.dataset;
+    if (dataset.url) {
+      console.log(dataset.url);
+     
+      wx.navigateTo({
+        url: '../web-view/webViewPage?url=' + dataset.url,
+        success: function (res) {
+          console.log("videoClick success")
+        },
+        fail: function (err) {
+        }
+      });
+    }
   },
 
   /**
@@ -121,5 +140,11 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  foodClick:function(options){
+    var id = options.target.dataset.id;
+    wx.navigateTo({
+      url: '../scenicspot/detail?id=' + id,
+    })
   }
 })

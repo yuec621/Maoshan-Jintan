@@ -58,16 +58,15 @@ swiper{
   margin: auto;
     padding-top: 1rem;
    
-
- 
-  
 }
 .recommend-list {
   width: 44%;
-  overflow: hidden;
-  float: left;
+  /* overflow: hidden;
+  float: left; */
   position: relative;
   margin: 0 0 0.6rem 0.6rem;
+  display: inline-block;
+  height:100px;
  
 }
 .recommend-list .recommend-image{
@@ -89,4 +88,28 @@ swiper{
   font-size: 14px;
    bottom: 0;
   
+}
+button{
+  margin:1rem 1rem;
+  outline:none;
+  color:#fff;
+  font-size:14px;
+  height:40px;
+line-height:40px;
+}
+.scenic-book{
+  background-color: #03b391;
+}
+.scenic-nav{
+  background-color: #5f9c9d;
+}
+.scenic-VR{
+  background-color: #7b66ef;
+}
+.icon{
+  width:16px;
+  height:16px;
+  margin-bottom: -3px;
+  margin-right:8px;
+  display:inline-block;
 }

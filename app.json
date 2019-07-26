@@ -33,9 +33,8 @@
     "pages/scenicspot/list",
     "pages/scenicspot/detail",
     "pages/reserve/list",
-    "pages/reserve/detail"
-
-  
+    "pages/reserve/detail",
+    "pages/search/list"
   ],
   "window": {
     "backgroundTextStyle": "light",

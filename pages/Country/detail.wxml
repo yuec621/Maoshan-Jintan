@@ -11,4 +11,41 @@
    <view class="content">
     <rich-text nodes="{{content}}"></rich-text>
   </view>
+
+   <view class="food-top">
+      <p>详细地址</p>
+      <view class="food-block"></view>
+      <view></view>
+        </view>
+
+     <view class="grey"></view>
+     <view class="food-top">
+      <p>更多功能</p>
+      <view class="food-block"></view>
+      <button class="scenic-nav" bindtap="bookScenic" data-url='https://mo.amap.com/navigation/index/saddr=%E6%88%91%E7%9A%84%E4%BD%8D%E7%BD%AE&daddr=119.335648871528%2C31.808605414497%2C%E8%8C%85%E5%B1%B1%E5%AE%9D%E7%9B%9B%E5%9B%AD' ><image class="icon" src="../../images/icon/nav.png" />点击导航</button>
+        </view>
+        
+   <view class="grey"></view>
+  <view class="food-bottom">
+    <view class="food-top">
+      <p>猜你喜欢</p>
+      <view class="food-block"></view>
+        </view>
+       <view class='view-recommend'>
+    
+        <block wx:for='{{scientList}}' wx:if="{{index/2<1}}" >
+        <view class='recommend-list' >
+          <view class="recommend-image">
+               <image src="https://www.chinamaoshan.cn{{item.pic}}"  bindtap='foodClick' data-id='{{item.id}}' mode='scaleToFill' />
+          </view>
+       
+        <view class='recommend-item-title'>{{item.name}}</view>
+      </view>
+    </block>
+    
+    
+  
+  </view>
+       
+  </view>
 </scroll-view>

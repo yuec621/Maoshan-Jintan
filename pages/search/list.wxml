@@ -1,0 +1,15 @@
+<!--pages/search/list.wxml-->
+<view>
+    <view class="search">
+    <input  class="input" placeholder="{{msg}}"/>
+    
+  </view>
+ <view class="grey"></view>
+ <view class="hot-search">热门搜索</view>
+ <view class="sign-box">
+        <view class="signature"  wx:for='{{sign}}'>{{item.name}}</view>
+     
+ </view>
+</view>
+  
+
