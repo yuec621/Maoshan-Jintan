@@ -91,16 +91,23 @@ swiper{
 }
 button{
   margin:1rem 1rem;
+<<<<<<< HEAD
   outline:none;
   color:#fff;
   font-size:14px;
   height:40px;
 line-height:40px;
+=======
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+>>>>>>> 698ec3ef59b6796b38e095b89b8ea8e1d9d3a0cb
 }
 .scenic-book{
   background-color: #03b391;
 }
 .scenic-nav{
+<<<<<<< HEAD
   background-color: #5f9c9d;
 }
 .scenic-VR{
@@ -112,4 +119,10 @@ line-height:40px;
   margin-bottom: -3px;
   margin-right:8px;
   display:inline-block;
+=======
+  background-color: #03b391;
+}
+.scenic-VR{
+  background-color: #03b391;
+>>>>>>> 698ec3ef59b6796b38e095b89b8ea8e1d9d3a0cb
 }

@@ -30,9 +30,16 @@
     "pages/TravelInfo/detail",
     "pages/scenicspot/list",
     "pages/scenicspot/detail",
+<<<<<<< HEAD
     "pages/reserve/list",
     "pages/reserve/detail",
     "pages/search/list"
+=======
+    "pages/reserve/list"
+
+
+  
+>>>>>>> 698ec3ef59b6796b38e095b89b8ea8e1d9d3a0cb
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -110,7 +110,11 @@
      
       <view class='scenic-list' >
         <view class="scenic-image">
+<<<<<<< HEAD
        <image src="{{item.pic}}"  bindtap='scenicClick' data-id='{{item.id}}' mode='scaleToFill' />
+=======
+       <image src="{{item.Pic}}"  bindtap='scenicClick' data-id='{{item.Id}}' mode='scaleToFill' />
+>>>>>>> 698ec3ef59b6796b38e095b89b8ea8e1d9d3a0cb
         </view>
        <view class='scenic-item-title'>{{item.name}}</view>
         </view>
@@ -176,7 +180,11 @@
     <block wx:for='{{scenicList}}' wx:if="{{index/3<1}}" >
         <view class='recommend-list' >
           <view class="recommend-image">
+<<<<<<< HEAD
                <image src="{{item.pic}}"  bindtap='scenicClick' data-id='{{item.id}}' mode='scaleToFill' />
+=======
+               <image src="{{item.Pic}}"  bindtap='scenicClick' data-id='{{item.Id}}' mode='scaleToFill' />
+>>>>>>> 698ec3ef59b6796b38e095b89b8ea8e1d9d3a0cb
           </view>
        
         <view class='recommend-item-title'>{{item.name}}</view>

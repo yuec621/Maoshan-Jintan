@@ -8,12 +8,18 @@
      <view class='item'>
       <image class='item-img' mode='scaleToFill'  bindtap='foodClick' data-url='https://i.meituan.com/awp/h5/hotel/poi/deal.html?poiId=92336596' data-id='{{item.id}}' src="https://www.chinamaoshan.cn{{item.pic}}" />
       <view class="block-image">酒店预订</view>
+<<<<<<< HEAD
      <view class="image-title">{{item.name}}</view>
    
+=======
+     <view class="image-title">{{item.Name}}</view>
+     
+>>>>>>> 698ec3ef59b6796b38e095b89b8ea8e1d9d3a0cb
     </view>
     
   </block>
 
+<<<<<<< HEAD
      <block wx:for='{{list1}}'>
       
      <view class='item'>
@@ -23,6 +29,20 @@
       </view>
   
   </block> 
+=======
+  <block wx:for='{{list}}'>
+      
+     <view class='item'>
+      <image class='item-img' mode='scaleToFill'  bindtap='foodClick' data-url='https://i.meituan.com/changzhou/all/?cid=2&stid_b=1&cateType=poi'data-id='{{item.Id}}' src="{{item.Pic}}" />
+      <view class="block-image">门票预订</view>
+     <view class="image-title">{{item.Name}}</view>
+     
+    </view>
+    
+  </block>
+
+
+>>>>>>> 698ec3ef59b6796b38e095b89b8ea8e1d9d3a0cb
 </view>
 
   <view class='loading'>{{loading}}</view>

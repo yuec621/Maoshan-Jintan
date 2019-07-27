@@ -339,7 +339,10 @@ Page({
         });
         return;
       }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 698ec3ef59b6796b38e095b89b8ea8e1d9d3a0cb
       else if (dataset.url == this.data.menuList[7].url)
       {
         wx.navigateTo({
@@ -354,13 +357,19 @@ Page({
         });
         return;
       }
+<<<<<<< HEAD
       else if (dataset.url == this.data.menuList[4].url)
+=======
+      
+      else if (dataset.url == this.data.menuList[5].url)
+>>>>>>> 698ec3ef59b6796b38e095b89b8ea8e1d9d3a0cb
       {
         wx.navigateTo({
-          url: '../scenicspot/list',
+          url: '../Country/list',
         });
         return;
       }
+<<<<<<< HEAD
       
       else if (dataset.url == this.data.menuList[5].url) {
         wx.navigateTo({
@@ -369,14 +378,17 @@ Page({
         return;
       }
     
+=======
+     
+     
+>>>>>>> 698ec3ef59b6796b38e095b89b8ea8e1d9d3a0cb
       else if (dataset.url == this.data.menuList[3].url) {
         wx.navigateTo({
           url: '../reserve/list',
         });
         return;
       }
-      
-
+    }    
       wx.navigateTo({
         url: '../web-view/webViewPage?url=' + dataset.url,
         success: function (res) {
@@ -385,7 +397,7 @@ Page({
         fail: function (err) {
         }
       });
-    }
+    
   },
   //热门资讯详情
   infoClick:function(e){
@@ -434,17 +446,46 @@ Page({
       });
     }
   },
+<<<<<<< HEAD
   scenicMore: function (e) {
     //首页热门新闻更多点击事件
+=======
+
+  recomendMore: function (e) {
+    //首页热门推荐更多点击事件
+>>>>>>> 698ec3ef59b6796b38e095b89b8ea8e1d9d3a0cb
     var dataset = e.currentTarget.dataset;
     console.log(dataset)
     if (dataset.url) {
       wx.navigateTo({
         // url: '../web-view/webViewPage?url=' + dataset.url,
+<<<<<<< HEAD
         url: '../scenicspot/list',
 
         success: function (res) {
           console.log("newsMoreClick success")
+=======
+        url: '../reserve/list',
+        success: function (res) {
+          console.log("goodMoreClick success")
+        },
+        fail: function (err) {
+        }
+      });
+    }
+  },
+
+  scenicMore: function (e) {
+    //首页热门美食更多点击事件
+    var dataset = e.currentTarget.dataset;
+    console.log(dataset)
+    if (dataset.url) {
+      wx.navigateTo({
+        url: '../web-view/webViewPage?url=' + dataset.url,
+      
+        success: function (res) {
+          console.log("goodMoreClick success")
+>>>>>>> 698ec3ef59b6796b38e095b89b8ea8e1d9d3a0cb
         },
         fail: function (err) {
         }
@@ -469,6 +510,7 @@ Page({
     }
   },
 
+<<<<<<< HEAD
   recomendMore: function (e) {
     //首页热门新闻更多点击事件
     var dataset = e.currentTarget.dataset;
@@ -486,6 +528,9 @@ Page({
       });
     }
   },
+=======
+  
+>>>>>>> 698ec3ef59b6796b38e095b89b8ea8e1d9d3a0cb
   videoClick: function (e) {
     //首页文章视图点击事件
     var dataset = e.currentTarget.dataset;
@@ -517,6 +562,12 @@ Page({
         }
       });
     }
+  },
+  scenicClick:function(options){
+    var id = options.target.dataset.id;
+    wx.navigateTo({
+      url: '../scenicspot/detail?id=' + id,
+    })
   },
 
   searchClick: function (e) {

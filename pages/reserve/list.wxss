@@ -26,15 +26,13 @@
 }
 .item{
   width: 95%;
-  height: 300px;
+  height: 240px;
   overflow: hidden;
   float: left;
    margin: 0.8rem 0 0 0.5rem;
    position: relative;
    background-color: #fff;
   
-  
-
 }
 .block-image{
   padding-left: 10px;
@@ -49,7 +47,7 @@
 }
 .item-img{
   width: 100%;
-  height: 67%;
+  height: 72%;
 }
 
 .image-title{
@@ -61,22 +59,12 @@
   text-align: center;
   font-size: 14px;
   position: absolute;
+  margin-top: 10px;
+  
  
  
 }
-.image-abs{
-  width: 100%;
-   text-overflow: ellipsis;
-  height:60px;
-  padding-left:10px;
-  font-size: 14px;
-  position: absolute;
-  white-space: wrap;
-  bottom:0;
-  margin-bottom: 10px;
- 
- 
-}
+
 
 .loading{
   clear: both;
