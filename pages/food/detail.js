@@ -52,6 +52,7 @@ Page({
           imgUrls:data.arry,
           title: data.name,
           content: data.introduction,
+          foodlist:data.foodlist
         });
       }
     }),

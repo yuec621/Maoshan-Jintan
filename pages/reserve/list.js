@@ -117,7 +117,7 @@ Page({
   foodClick:function(options){
     //首页热门美食更多点击事件
     var dataset = options.currentTarget.dataset;
-    console.log(dataset)
+    console.log(dataset.url.poiId)
     if (dataset.url) {
       wx.navigateTo({
         url: '../web-view/webViewPage?url=' + dataset.url,

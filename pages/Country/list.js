@@ -11,7 +11,7 @@ Page({
     winWidth:0,
     winHeight:0,
     list:[],
-    loading: "加载中..."
+    loading: "  "
   },
 
   /**
@@ -79,7 +79,7 @@ Page({
   onReachBottom: function () {
     var that = this;
     wx.request({
-        url: domain + '/actionapi/HomeRecommend/GetScenicList?p=' + (p + 1) + "&ps=" + ps,
+      url: domain + '/actionapi/HomeRecommend/GetSportfulList?p=' + (p + 1) + "&ps=" + ps,
         success: function (res) {
             if (res.data.length == 0) {
                 that.setData({

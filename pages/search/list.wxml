@@ -1,8 +1,8 @@
 <!--pages/search/list.wxml-->
 <view>
     <view class="search">
-    <input  class="input" placeholder="{{msg}}"/>
-    
+    <input  value='{{keyword}}' bindconfirm='goSearch' class="input" placeholder="搜索景点/美食/酒店/关键词"/>
+    <!-- {{title}} -->
   </view>
  <view class="grey"></view>
  <view class="hot-search">热门搜索</view>

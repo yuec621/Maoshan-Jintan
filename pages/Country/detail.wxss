@@ -23,6 +23,9 @@ swiper{
   margin:8px auto;
 
 }
+.detail-adress{
+  font-size:12px;
+}
 .grey{
   height:10px;
   width:100%;
@@ -68,4 +71,35 @@ line-height:40px;
   margin-bottom: -3px;
   margin-right:8px;
   display:inline-block;
+}
+.recommend-list {
+  width: 44%;
+  /* overflow: hidden;
+  float: left; */
+  position: relative;
+  margin: -1rem 0 0.6rem 0.6rem;
+  display: inline-block;
+  height:100px;
+
+ 
+}
+.recommend-list .recommend-image{
+  height:100px;
+ 
+ 
+}
+.recommend-list .recommend-image image{
+  width:100%;
+  height:100%;
+ 
+ 
+}
+.recommend-list .recommend-item-title{
+  height:40px;
+ line-height: 40px;
+  text-overflow: ellipsis;
+ text-align: center;
+  font-size: 14px;
+   bottom: 0;
+  
 }

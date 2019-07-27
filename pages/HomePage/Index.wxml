@@ -1,6 +1,6 @@
 <scroll-view class='container-home' scroll-y='true'>
   <view class="search">
-    <input bindtap='searchClick'  class="input" placeholder="搜索景点/美食/酒店/关键词"/>
+    <input bindtap='searchClick' data-url='https://www.chinamaoshan.cn/Mobile/Search/Index'  class="input" placeholder="搜索景点/美食/酒店/关键词"/>
   </view>
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='{{circular}}' indicator-active-color="#F9BE00" >
     <block wx:for="{{imgUrls}}">

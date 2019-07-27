@@ -25,12 +25,12 @@
       <view class="food-block"></view>
         </view>
 <scroll-view scroll-x="true" style=" width: 95%; white-space: nowrap; margin-left:16px;" >
-           <view wx:for='{{goodsList}}' class='recommend-list'  style=" display: inline-block" >
+           <view wx:for='{{foodlist}}' class='recommend-list'  style=" display: inline-block" >
             <view class="recommend-image">
-               <image src="{{item.Pic}}"  bindtap='foodClick' data-id='{{item.Id}}' mode='scaleToFill' />
+               <image src="https://www.chinamaoshan.cn{{item.img}}"  bindtap='foodClick' data-id='{{item.Id}}' mode='scaleToFill' />
           </view>
        
-        <view class='recommend-item-title'>{{item.Name}}</view>
+        <view class='recommend-item-title'>{{item.name}}</view>
       </view>
  
 </scroll-view>

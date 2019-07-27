@@ -53,7 +53,9 @@ Page({
         that.setData({
           imgUrls: data.arry,
           title: data.name,
+          adress:data.adress,
           content: data.introduction,
+          cList:data.cList
         });
       }
     })

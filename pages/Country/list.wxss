@@ -43,4 +43,5 @@
   background-color: #eee;
   line-height: 46px;
   text-align: center;
+  font-size: 12px;
 }

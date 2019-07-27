@@ -20,19 +20,66 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    wx.request({
-      url: domain + '/actionapi/HomeRecommend/GetSerachResult?keyword='+keyword,
-        method: 'GET',
-        success: function (res) {
-          console.log(res.data)
-            that.setData({
-              msg:res.data.msg
-            });
-        }
-    });
+    // var that = this;
+    // wx.request({
+    //   url: domain + '/actionapi/HomeRecommend/GetSerachResult?keyword='+keyword,
+    //     method: 'GET',
+    //     success: function (res) {
+    //       console.log(res.data)
+    //         that.setData({
+    //           msg:res.data.msg
+    //         });
+    //     }
+    // });
   
 
+  },
+  // 搜索
+goSearch: function(e) {
+  var that = this;
+  var formData = e.detail.value;
+  console.log(formData)
+  if (formData) {
+   
+   wx.request({
+   
+   url:domain + '/actionapi/HomeRecommend/GetSerachResult?keyword='+keyword,
+   data: {
+    title: formData
+   },
+   
+   header: {
+    'Content-Type': 'application/json'
+   },
+   success: function(res) {
+    that.setData({
+    search: res.data,
+    })
+    if (res.data.msg=='无相关视频'){
+    wx.showToast({
+     title: '无相关视频',
+     icon: 'none',
+     duration: 1500
+    })
+    }else{
+    let str = JSON.stringify(res.data);
+    // wx.navigateTo({
+    //  url: '../searchShow/searchShow?data=' + str
+    // })
+    }
+     
+    console.log(res.data.msg)
+   }
+   })
+  } else {
+   
+   wx.showToast({
+   title: '输入不能为空',
+   icon: 'none',
+   duration: 1500
+   })
+   
+  }
   },
 
   /**

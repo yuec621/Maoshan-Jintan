@@ -11,7 +11,7 @@ Page({
     winWidth:0,
     winHeight:0,
     list:[],
-    loading: "加载中...",
+    loading: " 加载中...",
     bigTop:
       {
          title: "特色景点·玩不停"
@@ -87,7 +87,7 @@ Page({
   onReachBottom: function () {
     var that = this;
     wx.request({
-      url: domain + '/actionapi/HomeRecommend/GetScenicInfo?p=' + (p + 1) + "&ps=" + ps,
+      url: domain + '/actionapi/HomeRecommend/GetSportfulList?p=' + (p + 1) + "&ps=" + ps,
         success: function (res) {
             if (res.data.length == 0) {
                 that.setData({
@@ -106,6 +106,7 @@ Page({
         }
     })
   },
+
 
   /**
    * 用户点击右上角分享

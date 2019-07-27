@@ -18,8 +18,6 @@
     "pages/Line/List",
     "pages/Line/Detail",
     "pages/Line/Order",
-    "pages/Scenic/list",
-    "pages/Scenic/detail",
     "pages/Hotel/list",
     "pages/Hotel/detail",
     "pages/food/list",

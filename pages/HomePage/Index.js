@@ -518,18 +518,35 @@ Page({
       });
     }
   },
+
+  searchClick: function (e) {
+    //首页搜索点击事件
+    var dataset = e.currentTarget.dataset;
+    if (dataset.url) {
+      console.log(dataset.url);
+      console.log(urlhelper.UrlEncode(dataset.url));
+      wx.navigateTo({
+        url: '../web-view/webViewPage?url=' +dataset.url,
+        success: function (res) {
+          console.log("GoodsClick success")
+        },
+        fail: function (err) {
+        }
+      });
+    }
+  },
   scenicClick:function(options){
     var id = options.target.dataset.id;
     wx.navigateTo({
       url: '../scenicspot/detail?id=' + id,
     })
   },
-  searchClick:function(options){
-    var id = options.target.dataset.id;
-    wx.navigateTo({
-      url: '../search/list',
-    })
-  },
+  // searchClick:function(options){
+  //   var id = options.target.dataset.id;
+  //   wx.navigateTo({
+  //     url: '../search/list',
+  //   })
+  // },
 
   foodClick:function(options){
     var id = options.target.dataset.id;
